@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\scr_Player2.js">
+    <Files>
+      <File FileName="Assets\Scripts\scr_HealthSystem.cs" Line="24" Column="22" />
+      <File FileName="Assets\Scripts\scr_Player2.js" Line="116" Column="4" />
+      <File FileName="Assets\Scripts\scr_Player.js" Line="113" Column="4" />
+      <File FileName="Assets\Scripts\scr_Zombie.js" Line="74" Column="25" />
+      <File FileName="Assets\Scripts\scr_Bullet.js" Line="32" Column="29" />
+      <File FileName="Assets\Scripts\scr_HealthSystem2.cs" Line="24" Column="21" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

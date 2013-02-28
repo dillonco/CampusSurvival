@@ -1,0 +1,27 @@
+Campus Zombie Survival Thingy
+
+Created by:
+Jon, Josh and Dillon
+
+Brief Description:
+
+Instructions:
+Use the arrow keys to move around, and space bar to shoot. 
+If you run into a zombie, blood splatter effects will happen.
+
+Things that need to be done:
+Basics:
+	1. Skins for all the game objects
+	2. Collision between humans, zombies and walls
+	3. Proper shooting mechanic
+	4. Smarter zombies
+	5. Player health system
+
+Intermediate:
+	1. Two player controls
+	2. Building blocks
+	3. Materials system
+	
+Advanced:
+	1. Multiplayer over LAN
+	2. Sexy Sprites
