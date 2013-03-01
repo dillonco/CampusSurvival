@@ -47,6 +47,8 @@
      <Compile Include="Assets\Scripts\BlueBump.cs" />
      <Compile Include="Assets\Scripts\RedBump.cs" />
      <Compile Include="Assets\Scripts\Spawn.cs" />
+     <Compile Include="Assets\Scripts\scr_BlueLight.cs" />
+     <Compile Include="Assets\Scripts\scr_Car.cs" />
      <Compile Include="Assets\Scripts\scr_HealthSystem.cs" />
      <Compile Include="Assets\Scripts\scr_HealthSystem2.cs" />
      <Compile Include="Assets\Scripts\scr_SmartestZombie.cs" />
