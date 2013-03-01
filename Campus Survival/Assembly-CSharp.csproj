@@ -44,16 +44,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BlueBump.cs" />
-     <Compile Include="Assets\Scripts\RedBump.cs" />
-     <Compile Include="Assets\Scripts\Spawn.cs" />
-     <Compile Include="Assets\Scripts\scr_BlueLight.cs" />
-     <Compile Include="Assets\Scripts\scr_Car.cs" />
-     <Compile Include="Assets\Scripts\scr_HealthSystem.cs" />
-     <Compile Include="Assets\Scripts\scr_HealthSystem2.cs" />
-     <Compile Include="Assets\Scripts\scr_SmartestZombie.cs" />
-     <Compile Include="Assets\Scripts\scr_ZombieSmart.cs" />
-     <Compile Include="Assets\Scripts\src_RealZombie.cs" />
+     <Compile Include="Assets\Scripts\C#\BlueBump.cs" />
+     <Compile Include="Assets\Scripts\C#\RedBump.cs" />
+     <Compile Include="Assets\Scripts\C#\Spawn.cs" />
+     <Compile Include="Assets\Scripts\C#\scr_HealthSystem.cs" />
+     <Compile Include="Assets\Scripts\C#\scr_HealthSystem2.cs" />
+     <Compile Include="Assets\Scripts\C#\scr_SmartestZombie.cs" />
+     <Compile Include="Assets\Scripts\C#\scr_ZombieSmart.cs" />
+     <Compile Include="Assets\Scripts\C#\src_RealZombie.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

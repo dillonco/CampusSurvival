@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\shoot.js">
+    <Files>
+      <File FileName="Assets\Scripts\src_RealZombie.cs" Line="40" Column="23" />
+      <File FileName="Assets\Scripts\scr_Player.js" Line="224" Column="10" />
+      <File FileName="Assets\DestroyMaterial.js" Line="17" Column="23" />
+      <File FileName="Assets\Scripts\shoot.js" Line="65" Column="3" />
+      <File FileName="Assets\BlueBump.cs" Line="23" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
