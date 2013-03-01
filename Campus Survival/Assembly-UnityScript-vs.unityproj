@@ -69,7 +69,6 @@
      <Compile Include="Assets\Scripts\scr_Zombie.js" />
      <Compile Include="Assets\Scripts\shoot.js" />
      <Compile Include="Assets\Scripts\shoot2.js" />
-     <None Include="Assets\ProjectLog.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

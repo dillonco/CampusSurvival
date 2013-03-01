@@ -54,7 +54,6 @@
      <Compile Include="Assets\Scripts\scr_SmartestZombie.cs" />
      <Compile Include="Assets\Scripts\scr_ZombieSmart.cs" />
      <Compile Include="Assets\Scripts\src_RealZombie.cs" />
-     <None Include="Assets\ProjectLog.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
