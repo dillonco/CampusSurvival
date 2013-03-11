@@ -16,7 +16,4 @@ function OnTriggerEnter (other: Collider) {
 	if(other.gameObject.tag == "Bullet") {
 		Destroy(gameObject);
 	}
-	else if (other.gameObject.tag == "bumper") {
-		other.SendMessage("bumped");
-	}
 }

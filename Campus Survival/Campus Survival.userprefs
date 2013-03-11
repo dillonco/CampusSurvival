@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/RedBump.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\JavaScript\scr_Player2.js">
     <Files>
-      <File FileName="Assets/RedBump.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\JavaScript\scr_Player.js" Line="265" Column="20" />
+      <File FileName="Assets\Scripts\C#\scr_HealthSystem.cs" Line="1" Column="34" />
+      <File FileName="Assets\Scripts\JavaScript\scr_Player2.js" Line="213" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

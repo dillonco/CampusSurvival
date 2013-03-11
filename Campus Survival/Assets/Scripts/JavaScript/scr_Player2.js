@@ -1,7 +1,9 @@
 //Player Script
 // Dillon: Jan 15
 var spawnPoint			: Transform;
-var noBase				: boolean = false;
+var spawnX				: float;
+var spawnY				: float;
+var noBase				: boolean = true;
 
 // Players speed
 var speed		: float = 10.0;
@@ -39,8 +41,10 @@ var firerate			: int = 15;
 var counter				: int = 0;
 
 
-var spacevalue : float = 1;
-var materialStash		: int = 0;
+var spacevalue 			: float = 1;
+var materialStash		: int = 100;
+
+var gun					: int = 1;
 
 
 
@@ -48,9 +52,7 @@ var materialStash		: int = 0;
 function left () {
 	key = "left";
 	moving2 = true;
-	newPos = transform.position;
-	newPos.x += speed * Time.deltaTime * spacevalue;
-	transform.position = newPos;
+	rigidbody.AddForce (5000 * spacevalue, 0, 0);
 	if (spacevalue == 1){
 		direc = "left";
 		upSocket.active = false;
@@ -64,9 +66,7 @@ function left () {
 function right () {
 	key = "right";
 	moving2 = true;
-	newPos = transform.position;
-	newPos.x -= speed * Time.deltaTime * spacevalue;
-	transform.position = newPos;
+	rigidbody.AddForce (-5000 * spacevalue, 0, 0);
 	if (spacevalue == 1){
 		direc = "right";
 		upSocket.active = false;
@@ -80,9 +80,7 @@ function right () {
 function up () {
 	key = "up";
 	moving2 = true;
-	newPos = transform.position;
-	newPos.y += speed * Time.deltaTime * spacevalue;
-	transform.position = newPos;
+	rigidbody.AddForce (0, 5000 * spacevalue, 0);
 	if (spacevalue == 1){
 		direc = "up";
 		upSocket.active = true;
@@ -96,9 +94,7 @@ function up () {
 function down () {
 	key = "down";
 	moving2 = true;
-	newPos = transform.position;
-	newPos.y -= speed * Time.deltaTime * spacevalue;
-	transform.position = newPos;
+	rigidbody.AddForce (0, -5000 * spacevalue, 0);
 	if (spacevalue == 1){
 		direc = "down";
 		upSocket.active = false;
@@ -162,14 +158,26 @@ function Update () {
 		}
 	}
 	else if(Input.GetKey(KeyCode.Q) && materialStash > 0) {
-		spacevalue = 0.5;
-		if (counter == 0) {
-			materialStash = materialStash - 1;
-			if (direc == "up") GameObject.Find("SocketUp2").SendMessage("place");
-			else if (direc == "down") GameObject.Find("SocketDown2").SendMessage("place");
-			else if (direc == "left") GameObject.Find("SocketLeft2").SendMessage("place");
-			else if (direc == "right") GameObject.Find("SocketRight2").SendMessage("place");
+		if (materialStash >= 100 && noBase == true){
+			materialStash = materialStash - 100;
+			var currentPos = transform.position;
+			spawnX = currentPos.x;
+			spawnY = currentPos.y;
+			SP = Instantiate(spawnPoint, transform.position, transform.rotation);
+			Physics.IgnoreCollision(SP.collider, collider);
+			noBase = false;
 			counter = 1;
+		}
+		else {
+			spacevalue = 0.5;
+			if (counter == 0) {
+				materialStash = materialStash - 1;
+				if (direc == "up") GameObject.Find("SocketUp2").SendMessage("place");
+				else if (direc == "down") GameObject.Find("SocketDown2").SendMessage("place");
+				else if (direc == "left") GameObject.Find("SocketLeft2").SendMessage("place");
+				else if (direc == "right") GameObject.Find("SocketRight2").SendMessage("place");
+				counter = 1;
+			}
 		}
 	}
 	else spacevalue = 1;
@@ -184,14 +192,14 @@ function OnTriggerEnter (other: Collider) {
 		if (blood) {
 			Instantiate(blood, transform.position, transform.rotation);
 			}
-	}
+	}/*
 	else if(other.gameObject.tag == "Block" || other.gameObject.tag == "Material Placed" || (other.gameObject.tag == "Player" && moving2))
 	{
 	if (key == "right") transform.Translate(0.5,0,0);
 	if (key == "left")	transform.Translate(-0.5,0,0);
 	if (key == "up")	transform.Translate(0,-0.5,0);
 	if (key == "down")	transform.Translate(0,0.5,0);
-	}
+	}*/
 	else if(other.gameObject.tag == "Material") {
 		materialStash++;
 	}
@@ -202,8 +210,19 @@ public function Respawn() {
 		Debug.LogError("P2 loses!");
 		Debug.Break();
 	}
-	transform.position = spawnPoint.position;
+	materialStash = 0;
+	var newPos = transform.position;
+	newPos.x = spawnX;
+	newPos.y = spawnY;
+	transform.position = newPos;
+	
+	
+	//transform.position = spawnPoint.position;
 }
 public function NoBase() {
 	noBase = true;
+}
+
+public function OnGUI () {
+	GUI.Label(Rect(10,60,100,50),"Materials: " + materialStash.ToString());
 }

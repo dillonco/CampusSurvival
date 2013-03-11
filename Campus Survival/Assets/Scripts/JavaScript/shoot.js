@@ -8,6 +8,8 @@ var gun 				: int = 1;
 var touchingZombie		: boolean = false;
 var playerNumber		: String = "dead1";
 var touchedZombie 		: Collider;
+var counter				: int = 0;
+var player 				: Transform;
 
 var matPos				: Vector3;
 
@@ -29,7 +31,7 @@ function gun3 () {
 
 
 function Start () {
-
+	
 }
 function activate() {
 	gameObject.active = true;
@@ -48,20 +50,27 @@ function fire() {
 }
 
 function place() {
-	if (touchingZombie) touchedZombie.SendMessage(playerNumber);
+	if (touchingZombie){
+	touchedZombie.SendMessage(playerNumber);
+	}
 	else {
 		matPos = transform.position;
 		matPos.x += Random.Range(-1.0f,1.0f);
 		matPos.y += Random.Range(-1.0f,1.0f);
-		Instantiate(spawn, matPos, transform.rotation);
+		var mat1 = Instantiate(spawn, matPos, transform.rotation) as Transform;
 		matPos = transform.position;
 		matPos.x += Random.Range(-1.0f,1.0f);
 		matPos.y += Random.Range(-1.0f,1.0f);
-		Instantiate(spawn, matPos, transform.rotation);
+		var mat2 = Instantiate(spawn, matPos, transform.rotation) as Transform;
 		matPos = transform.position;
 		matPos.x += Random.Range(-1.0f,1.0f);
 		matPos.y += Random.Range(-1.0f,1.0f);
-		Instantiate(spawn, matPos, transform.rotation);
+		var mat3 = Instantiate(spawn, matPos, transform.rotation) as Transform;
+		Physics.IgnoreCollision(mat1.collider, player.collider);
+		Physics.IgnoreCollision(mat2.collider, player.collider);
+		Physics.IgnoreCollision(mat3.collider, player.collider);
+	
+	
 	}
 }	
 
@@ -74,11 +83,14 @@ function OnTriggerStay (other: Collider) {
 	
 
 }
+
+function OnTriggerExit (other: Collider) {
+	touchingZombie = false;
+	}
 	
 	
 function Update () {
 	//Create a bullet
 	
 	
-	touchingZombie = false;
 }

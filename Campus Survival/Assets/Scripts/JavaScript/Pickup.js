@@ -9,7 +9,7 @@ function Update () {
 }
 
 function OnTriggerEnter (other: Collider) {
-	if(other.gameObject.tag == "Player") {
+	if(other.gameObject.tag == "Socket") {
 		Destroy(gameObject);
 	}
 }

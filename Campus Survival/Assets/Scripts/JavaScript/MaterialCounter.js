@@ -11,6 +11,8 @@ function Update () {
 
 }
 
+
+
 function OnTriggerEnter (other: Collider) {
 	if(other.gameObject.tag == "Bullet" || other.gameObject.tag == "Bullet2") {
 		if (counter == 0) {

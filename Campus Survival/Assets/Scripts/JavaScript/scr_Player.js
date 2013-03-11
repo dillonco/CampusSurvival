@@ -1,7 +1,9 @@
 //Player Script
 // Dillon: Jan 15
 var spawnPoint			: Transform;
-var noBase				: boolean = false;
+var spawnX				: float;
+var spawnY				: float;
+var noBase				: boolean = true;
 
 // Players speed
 var speed		: float = 10.0;
@@ -17,7 +19,6 @@ var verticalMax   		: int = 15;
 var projectile			: Transform;
 //var socketProjectile	: Transform;
 var blood				: Transform;
-var newPos				: Vector3;
 var camPos				: Vector3;
 var key 				: String = "up";
 var direc				: String = "up";
@@ -40,7 +41,7 @@ var counter				: int = 0;
 
 
 var spacevalue			: float = 1;
-var materialStash		: int = 0;
+var materialStash		: int = 100;
 
 var gun					: int = 1;
 
@@ -178,14 +179,27 @@ function Update () {
 		}
 	}
 	else if(Input.GetKey(KeyCode.RightShift) && materialStash > 0) {
-		spacevalue = 0.5;
-		if (counter == 0) {
-			materialStash = materialStash - 1;
-			if (direc == "up") GameObject.Find("SocketUp").SendMessage("place");
-			else if (direc == "down") GameObject.Find("SocketDown").SendMessage("place");
-			else if (direc == "left") GameObject.Find("SocketLeft").SendMessage("place");
-			else if (direc == "right") GameObject.Find("SocketRight").SendMessage("place");
-			counter = 1;
+		if (materialStash >= 100 && noBase == true){
+		materialStash = materialStash - 100;
+		var currentPos = transform.position;
+		spawnX = currentPos.x;
+		spawnY = currentPos.y;
+		SP = Instantiate(spawnPoint, transform.position, transform.rotation);
+		Physics.IgnoreCollision(SP.collider, collider);
+		noBase = false;
+		counter = 1;
+		}
+		else {
+			spacevalue = 0.5;
+			if (counter == 0) {
+				materialStash = materialStash - 1;
+				if (direc == "up") GameObject.Find("SocketUp").SendMessage("place");
+				else if (direc == "down") GameObject.Find("SocketDown").SendMessage("place");
+				else if (direc == "left") GameObject.Find("SocketLeft").SendMessage("place");
+				else if (direc == "right") GameObject.Find("SocketRight").SendMessage("place");
+				counter = 1;
+		}
+		
 		}
 	}
 	else spacevalue = 1;
@@ -227,14 +241,14 @@ function OnTriggerEnter (other: Collider) {
 		if (blood) {
 			Instantiate(blood, transform.position, transform.rotation);
 			}
-	}
+	}/*
 	else if(other.gameObject.tag == "Block" || other.gameObject.tag == "Material Placed2" || (other.gameObject.tag == "Player" && moving))
 	{
 	if (key == "right") transform.Translate(0.5,0,0);
 	if (key == "left")	transform.Translate(-0.5,0,0);
 	if (key == "up")	transform.Translate(0,-0.5,0);
 	if (key == "down")	transform.Translate(0,0.5,0);
-	}
+	}*/
 	else if(other.gameObject.tag == "Material") {
 		materialStash++;
 	}
@@ -246,9 +260,19 @@ public function Respawn() {
 		Debug.LogError("P1 loses!");
 		Debug.Break();
 	}
-	transform.position = spawnPoint.position;
+	materialStash = 0;
+	var newPos = transform.position;
+	newPos.x = spawnX;
+	newPos.y = spawnY;
+	transform.position = newPos;
+	
+	//transform.position = spawnPoint.position;
 }
 
 public function NoBase() {
 	noBase = true;
+}
+
+public function OnGUI () {
+	GUI.Label(Rect(815,60,100,50),"Materials: " + materialStash.ToString());
 }
