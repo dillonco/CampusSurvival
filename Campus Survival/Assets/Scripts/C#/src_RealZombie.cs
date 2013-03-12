@@ -12,6 +12,7 @@ public class src_RealZombie : MonoBehaviour {
 	public int attackDamage = 10;		// Amount of damage caused by a Zombie running into you
 	public int attackThreshold = 1;		// Range which zombies can attack
 	public int attackSpeed = 2;			// Attack every X seconds
+	
 	private Transform target;			// Who should the zombies target? Set in Start()
 	private RaycastHit hit;				// Raycast used for Zombies sight
 	private Vector3 randomDirection; 	// Random movement for bored Zombies
@@ -32,7 +33,9 @@ public class src_RealZombie : MonoBehaviour {
     private RaycastHit riHit;
     private RaycastHit lHit;
     private RaycastHit leHit;
+	
 	public int health = 3;
+	
 	public Transform KOZ; // knocked out zombie
 	public Transform DZ1; // dead zombie killed by player 1
 	public Transform DZ2; // dead zombie killed by player 2
@@ -44,9 +47,9 @@ public class src_RealZombie : MonoBehaviour {
 	public float player2BaseDistance;
 	
 	// for the stupid sort array;
-	public int max = 0;
+	public int min = 0;
 	public int temp;
-	public int maxpos;
+	public int minpos;
  	
 	// replaces zombie with knocked out zombie when shot enough times
 	void shot () {
@@ -87,29 +90,30 @@ public class src_RealZombie : MonoBehaviour {
 		return false;	
 	}
 	
+	// Returns the distance between the zombie and a target name
 	int getDistance(string name) {
 		if(GameObject.Find(name).transform.position != null) {
 			distance = (GameObject.Find(name).transform.position - transform.position).sqrMagnitude;
 			int intDistance = (int)distance;
 			return intDistance;
 		}
-		else return 500;
+		else return 500; //in case the player doesn't exist, just return a large range
 	}
 	
 	// Dillon's Motherfucking Magical Sort Array
 	int[,] sortArray(int[,] array) {
 		//yes we need 2 for loops
 		for (int i=0; i < array.Length; i++) {
-			//find the max
+			//find the min
 			for (int x=0; i < array.Length; i++) {
-				if(max < array[x, 0]) {
-					max = array[x, 0];	//Max value in array
-					maxpos = x;			//Position of max value
+				if(min > array[x, 0]) {
+					min = array[x, 0];	//Max value in array
+					minpos = x;			//Position of max value
 				}
 			temp = array[i, 0];
 			// Sets the new values ordered properly
-			array[i, 0] = max;
-			array[maxpos, 0] = temp;	
+			array[i, 0] = min;
+			array[minpos, 0] = temp;	
 			}
 		}
 		return array;
@@ -118,14 +122,14 @@ public class src_RealZombie : MonoBehaviour {
 	void Update () {
 		
 		//Creates the array 
-		int[,] priority = new int[,] {{getDistance("prf_Player1"),1}, {getDistance("prf_Player2"),2}}; 
-		//{getDistance("Feb 28 P1Spawn(Clone)"),3}, {getDistance("Feb 28 P2Spawn(Clone)"),4}};
+		int[,] priority = new int[,] {{getDistance("prf_Player1"),1}, {getDistance("prf_Player2"),2},
+		{getDistance("prf_Player3"),3}, {getDistance("prf_Player4)"),4}};
 	
 		//sort array
 		sortArray(priority);
 		// goes through to make sure they can see the player
 		// if not, zombie will check the next closest person if he can see them
-		for (int i=0; i < 2; i++) {
+		for (int i=0; i < priority.Length; i++) {
 			if(IsVisible(GameObject.Find("prf_Player" + priority[i, 1]).transform.position)){
 				target = GameObject.Find("prf_Player" + priority[i, 1]).transform;
 				Debug.LogError("Target is prf_Player" + priority[i, 1]);
