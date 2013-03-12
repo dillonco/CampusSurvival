@@ -46,6 +46,8 @@ public class src_RealZombie : MonoBehaviour {
 	public float player1BaseDistance;
 	public float player2BaseDistance;
 	
+	public float sec = 0;
+	
 	// for the stupid sort array;
 	public int min = 0;
 	public int temp;
@@ -201,28 +203,7 @@ public class src_RealZombie : MonoBehaviour {
 	
 	}
 	
-	void OnTriggerStay(Collider other) {
-		
-		scr_HealthSystem HealthSystem;
-        HealthSystem = other.GetComponent("scr_HealthSystem2") as scr_HealthSystem;
-		// Obviously never attack fellow zombies or walls
-		if(other.gameObject.tag == "Player") {
-			float sec = Time.time;
-			float waiting = (sec % 1);
-			
-			// First attack at .5 seconds of collision, all other attacks are 1 second apart
-			if(waiting == 0 || sec == .2){
-        		//HealthSystem.AdjustCurrentHealth(-attackDamage);
-				other.SendMessage("shot");
-			}
-			
-		} else if(other.gameObject.tag == "Material Placed" || other.gameObject.tag == "Material Placed2") {
-			other.SendMessage("destroy");
-			randomDirection = new Vector3(Random.Range(-20.0f,20.0f),Random.Range(-20.0f,20.0f),0);
-		}  
-			
-		
-    }
+	
 	IEnumerator OnCollisionStay(Collision other) {
 		// Once a Zombie hits a material, it stops, destroys it, and continues on
 		if(other.gameObject.tag == "Material Placed" || other.gameObject.tag == "Material Placed2"){
@@ -235,19 +216,19 @@ public class src_RealZombie : MonoBehaviour {
 		}
 		// Once you run into the Player, attack him!
 		else if(other.gameObject.tag == "Player" || other.gameObject.tag == "Spawn1" || other.gameObject.tag == "Spawn2") {
-			float sec = Time.time;
+			sec = sec + 0.01f;
 			float waiting = (sec % 1);
 			
 			// First attack at .5 seconds of collision, all other attacks are 1 second apart
-			if(waiting == 0 || sec == .2){
+			if(waiting <= 0.01 || sec == .2){
         		//HealthSystem.AdjustCurrentHealth(-attackDamage);
 				other.gameObject.SendMessage("shot");
 			}
 		}
 		// prevents zombies from trying to walk through walls
-		else if(other.gameObject.tag == "Block" || other.gameObject.tag == "Zombie"){
-			randomDirection = new Vector3(Random.Range(-20.0f,20.0f),Random.Range(-20.0f,20.0f),0);
-		}
+		//else if(other.gameObject.tag == "Block" || other.gameObject.tag == "Zombie"){
+		//	randomDirection = new Vector3(Random.Range(-20.0f,20.0f),Random.Range(-20.0f,20.0f),0);
+		//}
 	}
 	
 }

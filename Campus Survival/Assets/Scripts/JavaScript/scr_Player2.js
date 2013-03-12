@@ -4,9 +4,11 @@ var spawnPoint			: Transform;
 var spawnX				: float;
 var spawnY				: float;
 var noBase				: boolean = true;
+var materials 			: Transform;
+var respawning			: boolean = false;
 
 // Players speed
-var speed		: float = 10.0;
+var speed		: float = 20.0;
 //Health 
 var health				: int = 100; 
  //Map limits
@@ -50,7 +52,7 @@ var gun					: int = 1;
 function left () {
 	key = "left";
 	moving2 = true;
-	rigidbody.AddForce (5000 * spacevalue, 0, 0);
+	rigidbody.AddForce (250 * speed * spacevalue, 0, 0);
 	if (spacevalue == 1){
 		direc = "left";
 		upSocket.active = false;
@@ -64,7 +66,7 @@ function left () {
 function right () {
 	key = "right";
 	moving2 = true;
-	rigidbody.AddForce (-5000 * spacevalue, 0, 0);
+	rigidbody.AddForce (-250 * speed * spacevalue, 0, 0);
 	if (spacevalue == 1){
 		direc = "right";
 		upSocket.active = false;
@@ -78,7 +80,7 @@ function right () {
 function up () {
 	key = "up";
 	moving2 = true;
-	rigidbody.AddForce (0, 5000 * spacevalue, 0);
+	rigidbody.AddForce (0, 250 * speed * spacevalue, 0);
 	if (spacevalue == 1){
 		direc = "up";
 		upSocket.active = true;
@@ -92,7 +94,7 @@ function up () {
 function down () {
 	key = "down";
 	moving2 = true;
-	rigidbody.AddForce (0, -5000 * spacevalue, 0);
+	rigidbody.AddForce (0, -250 * speed * spacevalue, 0);
 	if (spacevalue == 1){
 		direc = "down";
 		upSocket.active = false;
@@ -185,36 +187,35 @@ function Update () {
 
 // What happens when a zombie attacks you
 function OnTriggerEnter (other: Collider) {
-	if(other.gameObject.tag == "Zombie") {
-		// Epic splatter effects
-		if (blood) {
-			Instantiate(blood, transform.position, transform.rotation);
-			}
-	}/*
-	else if(other.gameObject.tag == "Block" || other.gameObject.tag == "Material Placed" || (other.gameObject.tag == "Player" && moving2))
-	{
-	if (key == "right") transform.Translate(0.5,0,0);
-	if (key == "left")	transform.Translate(-0.5,0,0);
-	if (key == "up")	transform.Translate(0,-0.5,0);
-	if (key == "down")	transform.Translate(0,0.5,0);
-	}*/
-	else if(other.gameObject.tag == "Material") {
+	if(other.gameObject.tag == "Material") {
 		materialStash++;
 	}
 }
 public function Respawn() {
-	if (noBase){
-		Destroy(gameObject);
-		Debug.LogError("P2 loses!");
-		Debug.Break();
+	if (respawning == false) {
+		respawning = true;
+		speed = 0.0;
+		rigidbody.constraints = RigidbodyConstraints.FreezePosition| RigidbodyConstraints.FreezeRotation;
+		yield WaitForSeconds(2);
+		speed = 20.0;
+		rigidbody.constraints = RigidbodyConstraints.FreezePositionZ| RigidbodyConstraints.FreezeRotation;
+		for(i=0;i<(materialStash/5);i++){
+			Instantiate(materials, transform.position, transform.rotation);
+		}
+		materialStash = 0;
+		var newPos = transform.position;
+		newPos.x = spawnX;
+		newPos.y = spawnY;
+		transform.position = newPos;
+		if (noBase){
+			Destroy(gameObject);
+			Debug.LogError("P2 loses!");
+			Debug.Break();
+		}
+		GameObject.Find("prf_Player2").SendMessage("HealthRespawn");
+		//transform.position = spawnPoint.position;
+		respawning = false;
 	}
-	materialStash = 0;
-	var newPos = transform.position;
-	newPos.x = spawnX;
-	newPos.y = spawnY;
-	transform.position = newPos;
-	
-	
 	//transform.position = spawnPoint.position;
 }
 public function NoBase() {

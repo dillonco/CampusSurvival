@@ -7,6 +7,7 @@ public class scr_HealthSystem2 : MonoBehaviour {
 // Health variables
 public int maxHealth = 100;
 public int curHealth = 100;
+public Transform blood;
 
 public float healthBarLength;
 
@@ -31,15 +32,21 @@ public void AdjustCurrentHealth(int adj) {
 
 	if(curHealth <= 0){
 		GameObject.Find("prf_Player2").SendMessage("Respawn");
-		curHealth = 100;
+		curHealth = 0;
 		}
 	if (curHealth > maxHealth)
-		maxHealth = 1;
+		curHealth = maxHealth;
 
 	healthBarLength = (Screen.width / 2 - 25) * (curHealth / (float)maxHealth);
 	}
 	
 public void shot() {
+		Instantiate(blood, transform.position, transform.rotation);
 		AdjustCurrentHealth(-10);	
+	}
+	
+
+public void HealthRespawn() {
+	curHealth = maxHealth;
 	}
 }
