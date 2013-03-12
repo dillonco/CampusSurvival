@@ -42,6 +42,11 @@ public class src_RealZombie : MonoBehaviour {
 	public float player2Distance;
 	public float player1BaseDistance;
 	public float player2BaseDistance;
+	
+	// for the stupid sort array;
+	public int max = 0;
+	public int temp;
+	public int maxpos;
  	
 	// replaces zombie with knocked out zombie when shot enough times
 	void shot () {
@@ -82,63 +87,61 @@ public class src_RealZombie : MonoBehaviour {
 		return false;	
 	}
 	
+	int getDistance(string name) {
+		if(GameObject.Find(name).transform.position != null) {
+			distance = (GameObject.Find(name).transform.position - transform.position).sqrMagnitude;
+			int intDistance = (int)distance;
+			return intDistance;
+		}
+		else return 500;
+	}
 	
-	
-	
+	// Dillon's Motherfucking Magical Sort Array
+	int[,] sortArray(int[,] array) {
+		//yes we need 2 for loops
+		for (int i=0; i < array.Length; i++) {
+			//find the max
+			for (int x=0; i < array.Length; i++) {
+				if(max < array[x, 0]) {
+					max = array[x, 0];	//Max value in array
+					maxpos = x;			//Position of max value
+				}
+			temp = array[i, 0];
+			// Sets the new values ordered properly
+			array[i, 0] = max;
+			array[maxpos, 0] = temp;	
+			}
+		}
+		return array;
+	}
 	// Treat this as a while loop, as the game runs
 	void Update () {
 		
-		
-		if (GameObject.Find("prf_Player1") != null){
-		player1Distance = (GameObject.Find("prf_Player1").transform.position - transform.position).sqrMagnitude;	
-		} else player1Distance = 99999999; // Ensures if P1 doesnt exist, will not attempt to move towards it
-		if (GameObject.Find("prf_Player2") != null){
-		player2Distance = (GameObject.Find("prf_Player2").transform.position - transform.position).sqrMagnitude;
-		} else player2Distance = 99999999; // Ensures if P1 doesnt exist, will not attempt to move towards it
-		if (GameObject.Find("Feb 28 P1Spawn(Clone)") != null){
-		player1BaseDistance = (GameObject.Find("Feb 28 P1Spawn(Clone)").transform.position - transform.position).sqrMagnitude;	
-		} else player1BaseDistance = 99999999; // Ensures if P1 base doesnt exist, will not attempt to move towards it
-		if (GameObject.Find("Feb 28 P2Spawn(Clone)") != null){
-		player2BaseDistance = (GameObject.Find("Feb 28 P2Spawn(Clone)").transform.position - transform.position).sqrMagnitude;
-		} else player2BaseDistance = 99999999; // Ensures if P1 base doesnt exist, will not attempt to move towards it
-		
-		
-		// Sets target as closest VISIBLE player or base
-		float maxDist = 99999999;
-		if (player1Distance < maxDist && IsVisible(GameObject.Find("prf_Player1").transform.position)){ 
-			target = GameObject.Find("prf_Player1").transform;
-			maxDist = player1Distance;
-			chase = true;
-		}
-		if (player2Distance < maxDist && IsVisible(GameObject.Find("prf_Player2").transform.position)){
-			target = GameObject.Find("prf_Player2").transform;
-			maxDist = player2Distance;
-			chase = true;
-		}
-		if (player1BaseDistance < maxDist && IsVisible(GameObject.Find("Feb 28 P1Spawn(Clone)").transform.position)){ 
-			target = GameObject.Find("Feb 28 P1Spawn(Clone)").transform;
-			maxDist = player1BaseDistance;
-			chase = true;
-		}
-		if (player2BaseDistance < maxDist && IsVisible(GameObject.Find("Feb 28 P2Spawn(Clone)").transform.position)){
-			target = GameObject.Find("Feb 28 P2Spawn(Clone)").transform;
-			maxDist = player2BaseDistance;
-			chase = true;
-		}
-		// no visible targets
-		if (maxDist == 99999999) {
-			chase = false;
-			target = null;
+		//Creates the array 
+		int[,] priority = new int[,] {{getDistance("prf_Player1"),1}, {getDistance("prf_Player2"),2}}; 
+		//{getDistance("Feb 28 P1Spawn(Clone)"),3}, {getDistance("Feb 28 P2Spawn(Clone)"),4}};
+	
+		//sort array
+		sortArray(priority);
+		// goes through to make sure they can see the player
+		// if not, zombie will check the next closest person if he can see them
+		for (int i=0; i < 2; i++) {
+			if(IsVisible(GameObject.Find("prf_Player" + priority[i, 1]).transform.position)){
+				target = GameObject.Find("prf_Player" + priority[i, 1]).transform;
+				Debug.LogError("Target is prf_Player" + priority[i, 1]);
+				chase = true;
+			}
+			else chase = false;
 		}
 		
-		
-		
+		// actually sets the target and correct position
 		if (target != null) {
-		targetPosition = target.position; // Sets the constantly changing position
-		distance = Vector3.Distance(transform.position, targetPosition);
-		currentPosition = transform.position;
+			targetPosition = target.position; // Sets the constantly changing position
+			distance = Vector3.Distance(transform.position, targetPosition);
+			currentPosition = transform.position;
 		}
 		
+		// magic
 		AIFunctionality ();
 		
 		
@@ -183,9 +186,7 @@ public class src_RealZombie : MonoBehaviour {
     void MoveTowards (Vector3 direction) {
 
 		transform.LookAt(direction);
-		transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
-		
-		
+		transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);	
     }
 	
 	// Patrol movement for the Zombie
@@ -195,11 +196,6 @@ public class src_RealZombie : MonoBehaviour {
 		transform.Translate(Vector3.forward * walkSpeed * Time.deltaTime);
 	
 	}
-	
-	
-	
-	
-	
 	
 	void OnTriggerStay(Collider other) {
 		

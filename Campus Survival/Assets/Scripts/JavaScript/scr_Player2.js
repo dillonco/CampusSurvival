@@ -47,8 +47,6 @@ var materialStash		: int = 100;
 var gun					: int = 1;
 
 
-
-
 function left () {
 	key = "left";
 	moving2 = true;

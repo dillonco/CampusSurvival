@@ -49,7 +49,6 @@ var gun					: int = 1;
 
 
 
-
 function left () {
 	key = "left";
 	moving = true;

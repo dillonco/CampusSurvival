@@ -10,6 +10,7 @@ public int curHealth = 100;
 
 public float healthBarLength;
 
+	
 // initialize
 void Start () {
 	healthBarLength = Screen.width / 2;
