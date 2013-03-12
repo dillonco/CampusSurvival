@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
+// Players Base Health Script
+
 public class Health1C : MonoBehaviour {
 
 	public int curhealth = 10;
@@ -9,7 +11,7 @@ public class Health1C : MonoBehaviour {
 	public Transform player;
 	
 	void Start () {
-	healthBarLength = Screen.width / 2.07f;
+		healthBarLength = Screen.width / 2.07f;
 	}
 	
 	void Update () {

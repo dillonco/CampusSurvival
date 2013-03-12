@@ -5,7 +5,7 @@ function OnMouseEnter() {
 	renderer.material.color = Color.red;
 }
 function OnMouseExit() {
-	//Change the colour of the text
+	//Change the colour of the text back
 	renderer.material.color = Color.white;
 }
 
@@ -17,6 +17,7 @@ function OnMouseUp() {
 	}
 	else {
 		// play the game
+		// Numbers are stored in File -> Build Settings
 		Application.LoadLevel(1);
 	}
 }
