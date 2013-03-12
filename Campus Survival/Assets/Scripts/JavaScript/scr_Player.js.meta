@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 6532e60064deebf4198f3152474c877d
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - spawnPoint: {fileID: 400000, guid: 67a38cb760ea86340babdd6d49569608, type: 2}
+  - materials: {fileID: 400000, guid: d10d6ea419f30f343a81d49ac76942c7, type: 2}
+  - projectile: {instanceID: 0}
+  - blood: {instanceID: 0}
+  - upSocket: {instanceID: 0}
+  - downSocket: {instanceID: 0}
+  - leftSocket: {instanceID: 0}
+  - rightSocket: {instanceID: 0}
+  - leftTexture: {instanceID: 0}
+  - rightTexture: {instanceID: 0}
+  - upTexture: {instanceID: 0}
+  - downTexture: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
