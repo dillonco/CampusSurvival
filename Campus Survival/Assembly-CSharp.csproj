@@ -53,6 +53,8 @@
      <Compile Include="Assets\Scripts\C#\scr_HealthSystem.cs" />
      <Compile Include="Assets\Scripts\C#\scr_HealthSystem2.cs" />
      <Compile Include="Assets\Scripts\C#\src_RealZombie.cs" />
+     <Compile Include="Assets\Tuizi\Scripts\Sprite.cs" />
+     <Compile Include="Assets\Tuizi\Scripts\SpriteClip.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
