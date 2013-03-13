@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\C#\src_RealZombie.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\JavaScript\scr_Player2.js">
     <Files>
-      <File FileName="Assets\Scripts\C#\src_RealZombie.cs" Line="82" Column="2" />
+      <File FileName="Assets\Scripts\C#\src_RealZombie.cs" Line="155" Column="6" />
+      <File FileName="Assets\Scripts\JavaScript\scr_Player.js" Line="56" Column="16" />
+      <File FileName="Assets\Scripts\JavaScript\scr_Player2.js" Line="70" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

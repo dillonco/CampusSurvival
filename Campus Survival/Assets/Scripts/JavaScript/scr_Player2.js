@@ -52,6 +52,7 @@ var gun					: int = 1;
 function left () {
 	key = "left";
 	moving2 = true;
+	//transform.Translate(Vector3(0.3,0,0) * speed * Time.deltaTime);
 	rigidbody.AddForce (250 * speed * spacevalue, 0, 0);
 	if (spacevalue == 1){
 		direc = "left";
@@ -66,6 +67,7 @@ function left () {
 function right () {
 	key = "right";
 	moving2 = true;
+	//transform.Translate(Vector3(-0.3,0,0) * speed * Time.deltaTime);
 	rigidbody.AddForce (-250 * speed * spacevalue, 0, 0);
 	if (spacevalue == 1){
 		direc = "right";
@@ -80,6 +82,7 @@ function right () {
 function up () {
 	key = "up";
 	moving2 = true;
+	//transform.Translate(Vector3(0,0.3,0) * speed * Time.deltaTime);
 	rigidbody.AddForce (0, 250 * speed * spacevalue, 0);
 	if (spacevalue == 1){
 		direc = "up";
@@ -94,6 +97,7 @@ function up () {
 function down () {
 	key = "down";
 	moving2 = true;
+	//transform.Translate(Vector3(0,-0.3,0) * speed * Time.deltaTime);
 	rigidbody.AddForce (0, -250 * speed * spacevalue, 0);
 	if (spacevalue == 1){
 		direc = "down";
@@ -164,6 +168,7 @@ function Update () {
 			spawnX = currentPos.x;
 			spawnY = currentPos.y;
 			SP = Instantiate(spawnPoint, transform.position, transform.rotation);
+			SP.name = "prf_Player4";
 			Physics.IgnoreCollision(SP.collider, collider);
 			noBase = false;
 			counter = 1;
