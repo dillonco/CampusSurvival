@@ -3,7 +3,7 @@ using System.Collections;
 
 public class src_RealZombie : MonoBehaviour {
 	
-	public int ChaseRange = 15;			// Range a zombie will start chasing a player
+	public int zChaseRange = 50;			// Range a zombie will start chasing a player
 	public float runSpeed = 3f;		// Zombie run speed
 	public float walkSpeed = 2f;		// Zombie walk speed
 	public string tag_target = "Player";// The tag of your target, because tags are cool
@@ -49,7 +49,7 @@ public class src_RealZombie : MonoBehaviour {
 	public float sec = 0;
 	
 	// for the stupid sort array;
-	public int min = 0;
+	public int min = 501;
 	public int temp;
 	public int minpos;
  	
@@ -80,42 +80,49 @@ public class src_RealZombie : MonoBehaviour {
 			StartCoroutine(ZombiePatrol());
 	}
 	
-	
-	bool IsVisible(Vector3 targetPosition){ // checks to see if given object is visible and is a target
+	//Known bug: if player is standing still before zombie gets in range, then 
+	// the zombie won't see them
+	// To fix this, set kinematic to yes in rigidbody of the player
+	// this also breaks the current player movement
+	bool IsVisible(string targetName){ // checks to see if given object is visible and is a target
+		targetPosition = GameObject.Find(targetName).transform.position;
 		if (Physics.Linecast (transform.position, targetPosition, out hit)) {
-			// You can see the object
-			if (hit.collider.tag == tag_target || hit.collider.tag == tag_target1 || hit.collider.tag == tag_target2) {
-				// the object is a target
+				// You can see the object
+				// the object is something we want to attack, aka not a wall.
+			if (hit.collider.gameObject == GameObject.Find(targetName)) {
+				//Debug.LogError("Player is seen");
 				return true;
 			}
 		}
+		Debug.LogError("Player is invisible");
 		return false;	
 	}
 	
 	// Returns the distance between the zombie and a target name
 	int getDistance(string name) {
-		if(GameObject.Find(name).transform.position != null) {
-			distance = (GameObject.Find(name).transform.position - transform.position).sqrMagnitude;
-			int intDistance = (int)distance;
-			return intDistance;
+		int theDistance;
+		if(GameObject.Find(name) != null) {
+			theDistance = (int)(GameObject.Find(name).transform.position - transform.position).sqrMagnitude;
+			return theDistance;
 		}
-		else return 500; //in case the player doesn't exist, just return a large range
+		else return 1000; //in case the player doesn't exist, just return a large range
 	}
 	
 	// Dillon's Motherfucking Magical Sort Array
 	int[,] sortArray(int[,] array) {
 		//yes we need 2 for loops
-		for (int i=0; i < array.Length; i++) {
+		for (int i=0; i < 3; i++) {
 			//find the min
-			for (int x=0; i < array.Length; i++) {
+			for (int x=0; x < 3; x++) {
 				if(min > array[x, 0]) {
 					min = array[x, 0];	//Max value in array
 					minpos = x;			//Position of max value
+					temp = array[i, 0];
+					// Sets the new values ordered properly
+					array[i, 0] = min;
+					array[minpos, 0] = temp;	
 				}
-			temp = array[i, 0];
-			// Sets the new values ordered properly
-			array[i, 0] = min;
-			array[minpos, 0] = temp;	
+			
 			}
 		}
 		return array;
@@ -124,29 +131,29 @@ public class src_RealZombie : MonoBehaviour {
 	void Update () {
 		
 		//Creates the array 
-		int[,] priority = new int[,] {{getDistance("prf_Player1"),1}, {getDistance("prf_Player2"),2},
-		{getDistance("prf_Player3"),3}, {getDistance("prf_Player4)"),4}};
-	
+		int[,] priority = new int[,] {{getDistance("prf_Player1"),1}, {getDistance("prf_Player2"),2}, 
+			{getDistance("prf_Player3"),3}, {getDistance("prf_Player4)"),4}};
+		//
+		chase = false;
 		//sort array
 		sortArray(priority);
 		// goes through to make sure they can see the player
 		// if not, zombie will check the next closest person if he can see them
-		for (int i=0; i < priority.Length; i++) {
-			if(IsVisible(GameObject.Find("prf_Player" + priority[i, 1]).transform.position)){
-				target = GameObject.Find("prf_Player" + priority[i, 1]).transform;
-				Debug.LogError("Target is prf_Player" + priority[i, 1]);
-				chase = true;
-			}
-			else chase = false;
+		for (int i=0; i < 4; i++) {
+			if(GameObject.Find("prf_Player" + priority[i, 1]) != null &&
+				zChaseRange > priority[i, 0] &&
+				IsVisible("prf_Player" + priority[i, 1])) {
+					//Debug.LogError("Player distance:" + priority[i, 0]);
+					//Debug.LogError("Player" + priority[i, 1] + " is within chaserange");
+					//Passed 3 checks
+					target = GameObject.Find("prf_Player" + priority[i, 1]).transform;
+					targetPosition = target.position; // Sets the constantly changing position
+					distance = Vector3.Distance(transform.position, targetPosition);
+					currentPosition = transform.position;	
+					chase = true;
+					break;
+			}	
 		}
-		
-		// actually sets the target and correct position
-		if (target != null) {
-			targetPosition = target.position; // Sets the constantly changing position
-			distance = Vector3.Distance(transform.position, targetPosition);
-			currentPosition = transform.position;
-		}
-		
 		// magic
 		AIFunctionality ();
 		
