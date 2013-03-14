@@ -110,7 +110,7 @@ public class src_RealZombie : MonoBehaviour {
 	
 	// Dillon's Motherfucking Magical Sort Array
 	int[,] sortArray(int[,] array) {
-		//yes we need 2 for loops
+		//yes we need 2 for-loops
 		for (int i=0; i < 3; i++) {
 			//find the min
 			for (int x=0; x < 3; x++) {
@@ -164,6 +164,16 @@ public class src_RealZombie : MonoBehaviour {
      	pos.z = 0;
     	transform.position = pos;
 		
+		//----------------------Don't mind this, Josh is playing around with sprites.
+		
+		//transform.rotation *= 
+		//transform.eulerAngles *= new Vector3(1,-1,1);
+		//if (transform.rotation.z != 270) {
+			//transform.rotation = Quaternion.AngleAxis(270, Vector3.up);
+			//transform.rotation = Quaternion.Euler (180, 0, 0);
+		//}
+		//print (transform.rotation);
+		
 
 	}
 	
@@ -199,7 +209,9 @@ public class src_RealZombie : MonoBehaviour {
     void MoveTowards (Vector3 direction) {
 
 		transform.LookAt(direction);
-		transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);	
+		transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
+		//transform.Translate(Vector3.fix_this * runSpeed * Time.deltaTime);
+		// Note by Josh, for Josh: this is where you left off
     }
 	
 	// Patrol movement for the Zombie
