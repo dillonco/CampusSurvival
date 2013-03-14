@@ -39,6 +39,8 @@ public class src_RealZombie : MonoBehaviour {
 	public Transform KOZ; // knocked out zombie
 	public Transform DZ1; // dead zombie killed by player 1
 	public Transform DZ2; // dead zombie killed by player 2
+	public Transform dz1;
+	public Transform dz2;
 	
 	// distances to potential targets
 	public float player1Distance;
@@ -52,9 +54,13 @@ public class src_RealZombie : MonoBehaviour {
 	public int min = 501;
 	public int temp;
 	public int minpos;
+	public AudioClip attack;
+	public AudioClip zhit;
+	
  	
 	// replaces zombie with knocked out zombie when shot enough times
 	void shot () {
+		audio.PlayOneShot(zhit);
 		if (health == 1) {
 			Destroy(gameObject);
 			var newpos = transform.position;
@@ -67,11 +73,13 @@ public class src_RealZombie : MonoBehaviour {
 	// replaces zombie with dead zombie if hit with a droped material
 	void dead1 () {
 			Destroy(gameObject);
-			Instantiate(DZ1, transform.position, transform.rotation);
+			dz1 = Instantiate(DZ1, transform.position, transform.rotation) as Transform;
+			Physics.IgnoreCollision(dz1.collider, GameObject.Find("prf_Player1").collider);
 	}
 	void dead2 () {
 			Destroy(gameObject);
-			Instantiate(DZ2, transform.position, transform.rotation);
+			dz2 = Instantiate(DZ2, transform.position, transform.rotation) as Transform;
+			Physics.IgnoreCollision(dz2.collider, GameObject.Find("prf_Player2").collider);
 	}
 	
 	
@@ -94,7 +102,7 @@ public class src_RealZombie : MonoBehaviour {
 				return true;
 			}
 		}
-		Debug.LogError("Player is invisible");
+		//Debug.LogError("Player is invisible");
 		return false;	
 	}
 	
@@ -242,6 +250,7 @@ public class src_RealZombie : MonoBehaviour {
 			if(waiting <= 0.01 || sec == .2){
         		//HealthSystem.AdjustCurrentHealth(-attackDamage);
 				other.gameObject.SendMessage("shot");
+				audio.PlayOneShot(attack);
 			}
 		}
 		// prevents zombies from trying to walk through walls

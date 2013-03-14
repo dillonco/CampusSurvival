@@ -18,7 +18,7 @@ public class Health1C : MonoBehaviour {
 	}
 	
 	void OnGUI(){
-		GUI.Box(new Rect(815, 40, healthBarLength, 20),"Base: " + curhealth + "/" + maxhealth);
+		GUI.Box(new Rect(Screen.width / 2 + 15, 40, healthBarLength, 20),"Base: " + curhealth + "/" + maxhealth);
 	}
 	
 	void shot () {

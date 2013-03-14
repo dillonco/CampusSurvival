@@ -6,7 +6,7 @@ var projectileRight		: Transform;
 var spawn				: Transform;
 var gun 				: int = 1;
 var touchingZombie		: boolean = false;
-var playerNumber		: String = "dead1";
+var playerNumber		: String;
 var touchedZombie 		: Collider;
 var counter				: int = 0;
 var player 				: Transform;

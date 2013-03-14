@@ -49,6 +49,11 @@ var materialStash		: int = 100;
 var gun					: int = 1;
 
 
+var Shot 				: AudioClip;
+
+var inZone				: boolean = true;
+
+
 function left () {
 	key = "left";
 	moving2 = true;
@@ -157,7 +162,8 @@ function Update () {
 			if (direc == "up") GameObject.Find("SocketUp2").SendMessage("fire");
 			else if (direc == "down") GameObject.Find("SocketDown2").SendMessage("fire");
 			else if (direc == "left") GameObject.Find("SocketLeft2").SendMessage("fire");
-			else if (direc == "right") GameObject.Find("SocketRight2").SendMessage("fire");		
+			else if (direc == "right") GameObject.Find("SocketRight2").SendMessage("fire");			
+			audio.PlayOneShot(Shot);
 			counter = 1;
 		}
 	}
@@ -195,14 +201,23 @@ function OnTriggerEnter (other: Collider) {
 	if(other.gameObject.tag == "Material") {
 		materialStash++;
 	}
+	else if(other.gameObject.name == "Zone2") {
+		inZone = true;
+	}
+}
+
+function OnTriggerExit (other: Collider) {
+	if(other.gameObject.name == "Zone2") {
+		inZone = false;
+	}
 }
 public function Respawn() {
 	if (respawning == false) {
 		respawning = true;
+		counter = firerate + 1;
 		speed = 0.0;
 		rigidbody.constraints = RigidbodyConstraints.FreezePosition| RigidbodyConstraints.FreezeRotation;
 		yield WaitForSeconds(2);
-		speed = 20.0;
 		rigidbody.constraints = RigidbodyConstraints.FreezePositionZ| RigidbodyConstraints.FreezeRotation;
 		for(i=0;i<(materialStash/5);i++){
 			Instantiate(materials, transform.position, transform.rotation);
@@ -219,6 +234,8 @@ public function Respawn() {
 		}
 		GameObject.Find("prf_Player2").SendMessage("HealthRespawn");
 		//transform.position = spawnPoint.position;
+		speed = 20.0;
+		counter = firerate;
 		respawning = false;
 	}
 	//transform.position = spawnPoint.position;

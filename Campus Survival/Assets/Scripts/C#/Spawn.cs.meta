@@ -2,7 +2,8 @@ fileFormatVersion: 2
 guid: 54bf807c897a88f48b064b2ead6bbbe1
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - spawn: {fileID: 400004, guid: 5bb2565cfffe2874e9ac6f01b6e4f781, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

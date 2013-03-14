@@ -23,7 +23,7 @@ void Update () {
 }
 // Create a healthbar	
 void OnGUI(){
-	GUI.Box(new Rect(550, 10, healthBarLength, 20),"Health: " + curHealth + "/" + maxHealth);
+	GUI.Box(new Rect(Screen.width / 2 + 15, 10, healthBarLength, 20),"Health: " + curHealth + "/" + maxHealth);
 }
 
 // Method used to adjust health
