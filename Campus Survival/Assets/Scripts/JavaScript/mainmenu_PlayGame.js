@@ -1,4 +1,8 @@
 var isQuitButton = false;
+var isMultiplayerButton = false;
+var isPlayButton = false;
+
+var GUI_Lobby : Transform;
 
 function OnMouseEnter() {
 	//Change the colour of the text
@@ -15,9 +19,14 @@ function OnMouseUp() {
 		// quit the game
 		Application.Quit();
 	}
-	else {
+	if(isPlayButton) {
 		// play the game
 		// Numbers are stored in File -> Build Settings
 		Application.LoadLevel(1);
 	}
+	if(isMultiplayerButton) {
+		// Get rid of current game object
+		Destroy(GameObject.Find("MainMenu"));
+		 Instantiate(GUI_Lobby,transform.position,Quaternion.identity);
+		 }
 }

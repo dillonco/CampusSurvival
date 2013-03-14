@@ -37,13 +37,17 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Photon Unity Networking\MarcoPolo-Tutorial\monsterpackage\Resources\Scripts\CollisionParticleEffect.js" />
+     <Compile Include="Assets\Photon Unity Networking\MarcoPolo-Tutorial\monsterpackage\Resources\Scripts\CollisionSoundEffect.js" />
+     <Compile Include="Assets\Photon Unity Networking\MarcoPolo-Tutorial\monsterpackage\Resources\Scripts\Foot.js" />
+     <Compile Include="Assets\Photon Unity Networking\MarcoPolo-Tutorial\monsterpackage\Resources\Scripts\OrbitCamera.js" />
      <Compile Include="Assets\Scripts\JavaScript\DestroyMaterial.js" />
      <Compile Include="Assets\Scripts\JavaScript\DestroyMaterial2.js" />
      <Compile Include="Assets\Scripts\JavaScript\Health1.js" />
@@ -67,6 +71,14 @@
      <Compile Include="Assets\Scripts\JavaScript\scr_ScreenWin.js" />
      <Compile Include="Assets\Scripts\JavaScript\shoot.js" />
      <Compile Include="Assets\Scripts\JavaScript\shoot2.js" />
+     <None Include="Assets\Photon Unity Networking\MarcoPolo-Tutorial\marcopolo-readme.txt" />
+     <None Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\library\Photon3Unity3D.xml" />
+     <None Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\library\release_history.txt" />
+     <None Include="Assets\Photon Unity Networking\readme.txt" />
+     <None Include="Assets\Photon Unity Networking\changelog.txt" />
+ <Reference Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\library\Photon3Unity3D">
+ <HintPath>Assets\Photon Unity Networking\Plugins\PhotonNetwork\library\Photon3Unity3D.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
