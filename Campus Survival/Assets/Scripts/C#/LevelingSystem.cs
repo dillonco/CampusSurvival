@@ -89,20 +89,20 @@ nextLevelSound.Length - 1) - 1;
         }
 
         // check for the next required score
-        int nextLevelScore = 0;
+        int nextReqScore = 0;
         // if there are no more scores in the level score progression array
         //      switch over to linear progression
         //      otherwise, use the non-linear progression
         if (level >= nextLevelScore.Length) {
-            nextLevelScore = (level - nextLevelScore.Length + 1) *
+            nextReqScore = (level - nextLevelScore.Length + 1) *
 percentComplete;
         }
         else {
-            nextLevelScore = nextLevelScore[level];
+            nextReqScore = nextLevelScore[level];
         }
 
         // if we have the required score to level up, advance to the next level
-        if (score >= nextLevelScore) {
+        if (score >= nextReqScore) {
             level = Math.Min(level + 1, maxLevel);
             PlayNextLevelSound();
         }
