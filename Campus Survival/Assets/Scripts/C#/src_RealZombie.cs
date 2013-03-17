@@ -17,10 +17,10 @@ public class src_RealZombie : MonoBehaviour {
 	private RaycastHit hit;				// Raycast used for Zombies sight
 	private Vector3 randomDirection; 	// Random movement for bored Zombies
 	private bool chase = false;			// Whether or not the zombie is chasing someone
-	private Vector3 targetPosition;		// Current position of the target, Zombies have super smell, and your abercrombie cologne is pretty strong brah
-	private Vector3 lastKnownPosition;	// Last position a zombie saw you at
+	private Vector3 targetDirection;		// Current position of the target, Zombies have super smell, and your abercrombie cologne is pretty strong brah
+	private Vector3 directionLastSeen;	// Last position a zombie saw you at
 	private float distance;				// Distance between zombie and target
-	private Vector3 currentPosition;
+	private Vector3 currentPosition;    // JOSH SAYS: Is this a leftover variable from something else?
 		
 	
 	// Raycasting against walls
@@ -93,8 +93,8 @@ public class src_RealZombie : MonoBehaviour {
 	// To fix this, set kinematic to yes in rigidbody of the player
 	// this also breaks the current player movement
 	bool IsVisible(string targetName){ // checks to see if given object is visible and is a target
-		targetPosition = GameObject.Find(targetName).transform.position;
-		if (Physics.Linecast (transform.position, targetPosition, out hit)) {
+		targetDirection = GameObject.Find(targetName).transform.position;
+		if (Physics.Linecast (transform.position, targetDirection, out hit)) {
 				// You can see the object
 				// the object is something we want to attack, aka not a wall.
 			if (hit.collider.gameObject == GameObject.Find(targetName)) {
@@ -140,7 +140,7 @@ public class src_RealZombie : MonoBehaviour {
 		
 		//Creates the array 
 		int[,] priority = new int[,] {{getDistance("prf_Player1"),1}, {getDistance("prf_Player2"),2}, 
-			{getDistance("prf_Player3"),3}, {getDistance("prf_Player4)"),4}};
+			{getDistance("prf_Player3"),3}, {getDistance("prf_Player4"),4}};
 		//
 		chase = false;
 		//sort array
@@ -155,8 +155,8 @@ public class src_RealZombie : MonoBehaviour {
 					//Debug.LogError("Player" + priority[i, 1] + " is within chaserange");
 					//Passed 3 checks
 					target = GameObject.Find("prf_Player" + priority[i, 1]).transform;
-					targetPosition = target.position; // Sets the constantly changing position
-					distance = Vector3.Distance(transform.position, targetPosition);
+					targetDirection = target.position; // Sets the constantly changing position
+					distance = Vector3.Distance(transform.position, targetDirection);
 					currentPosition = transform.position;	
 					chase = true;
 					break;
@@ -195,33 +195,38 @@ public class src_RealZombie : MonoBehaviour {
 	
 	// The heart of Zombie...
 	void AIFunctionality () {
-		if (chase == true) {
-			MoveTowards (targetPosition);
-			lastKnownPosition = targetPosition;  //Constantly setting this just incase you lose him
+		if (chase) {
+			MoveTowards (targetDirection, true);
+			directionLastSeen = targetDirection;  //Constantly setting this just in case you lose him
 		}
-		if (chase == false) { 
-			// check to see if you have a last known position
-			if (lastKnownPosition != Vector3.zero) {
-				MoveTowards (lastKnownPosition);
+		else {
+			// Check to see if you have a last known position
+			if (directionLastSeen != Vector3.zero) {
+				MoveTowards (directionLastSeen, true);
 				// Once it gets close to the last known position, and hasn't seen anything yet, zombie patrols again
-				if ((lastKnownPosition - transform.position).sqrMagnitude < .5) lastKnownPosition = Vector3.zero;
+				if ((directionLastSeen - transform.position).sqrMagnitude < .5) directionLastSeen = Vector3.zero;
 			}
-			// Haven't seen the player yet
-			else {
-				Patrol(randomDirection);
-			}
+			// If there's no last known position
+			else
+				MoveTowards(randomDirection, false);
 		}
 	}
-	// Walks the Zombie towards a position
+	// Moves the Zombie towards a position
 	// Tricky names, eh?
-    void MoveTowards (Vector3 direction) {
+    void MoveTowards (Vector3 direction, bool fast) {
 
 		transform.LookAt(direction);
-		transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
-		//transform.Translate(Vector3.fix_this * runSpeed * Time.deltaTime);
+		
+		if(fast)
+			transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
+		else
+			transform.Translate(Vector3.forward * walkSpeed * Time.deltaTime);
+		
+		//transform.Translate(Vector3.where_the_hell_am_I_going_to_get_this * runSpeed * Time.deltaTime);
 		// Note by Josh, for Josh: this is where you left off
     }
 	
+	/*
 	// Patrol movement for the Zombie
 	void Patrol(Vector3 direction) {
 		
@@ -229,11 +234,12 @@ public class src_RealZombie : MonoBehaviour {
 		transform.Translate(Vector3.forward * walkSpeed * Time.deltaTime);
 	
 	}
+	*/
 	
 	
 	IEnumerator OnCollisionStay(Collision other) {
 		// Once a Zombie hits a material, it stops, destroys it, and continues on
-		if(other.gameObject.tag == "Material Placed" || other.gameObject.tag == "Material Placed2"){
+		if (other.gameObject.tag == "Material Placed" || other.gameObject.tag == "Material Placed2") {
 			runSpeed = 0f;
 			walkSpeed = 0f;
 			yield return new WaitForSeconds(0.5f);
@@ -243,11 +249,11 @@ public class src_RealZombie : MonoBehaviour {
 		}
 		// Once you run into the Player, attack him!
 		else if(other.gameObject.tag == "Player" || other.gameObject.tag == "Spawn1" || other.gameObject.tag == "Spawn2") {
-			sec = sec + 0.01f;
+			sec += 0.01f;
 			float waiting = (sec % 1);
 			
 			// First attack at .5 seconds of collision, all other attacks are 1 second apart
-			if(waiting <= 0.01 || sec == .2){
+			if (waiting <= 0.01 || sec == .2){
         		//HealthSystem.AdjustCurrentHealth(-attackDamage);
 				other.gameObject.SendMessage("shot");
 				audio.PlayOneShot(attack);
