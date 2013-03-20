@@ -7,7 +7,7 @@ using System.Collections;
 /// E.g. the disabled mainmenu would receive OnJoinedRoom while having just switched to the game scene.
 /// Disabling the gameobjects prevents this problem.
 /// </summary>
-public class EnableScript : MonoBehaviour
+public class EnableScript : Photon.MonoBehaviour
 {
     public GameObject game;
     public GameObject mainMenu;

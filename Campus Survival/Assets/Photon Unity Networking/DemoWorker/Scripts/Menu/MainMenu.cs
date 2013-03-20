@@ -7,7 +7,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : Photon.MonoBehaviour
 {
     private string roomName = "myRoom";
 

@@ -39,7 +39,7 @@ public class ThirdPersonNetwork : Photon.MonoBehaviour
         }
         else
         {
-            //Network player, receive data
+            //PhotonNetwork player, receive data
             controllerScript._characterState = (CharacterState)(int)stream.ReceiveNext();
             correctPlayerPos = (Vector3)stream.ReceiveNext();
             correctPlayerRot = (Quaternion)stream.ReceiveNext();
