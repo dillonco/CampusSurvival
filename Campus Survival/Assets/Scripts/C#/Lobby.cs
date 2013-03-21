@@ -234,7 +234,7 @@ public class Lobby : Photon.MonoBehaviour
     {
         //Stop communication until in the game
         PhotonNetwork.isMessageQueueRunning = false;
-        Application.LoadLevel(1);
+        Application.LoadLevel(2);
     }
 
 
