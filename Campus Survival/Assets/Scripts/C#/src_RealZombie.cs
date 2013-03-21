@@ -70,6 +70,15 @@ public class src_RealZombie : MonoBehaviour {
 		else health--;
 	}
 	
+	
+	// killd zombie if too close to exploding car
+	public void boom (Vector3 carPos) {
+		if ((int)(carPos - transform.position).sqrMagnitude < 100) {
+			Destroy(gameObject);
+		}
+		
+	}
+	
 	// replaces zombie with dead zombie if hit with a droped material
 	void dead1 () {
 			Destroy(gameObject);

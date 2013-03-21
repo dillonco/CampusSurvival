@@ -17,7 +17,7 @@ function Update () {
 
 function OnTriggerEnter (other : Collider) {
 
-	if(other.gameObject.tag == "Zombie")
+	if(other.gameObject.tag == "Zombie" || other.gameObject.tag == "Car")
 	{
 		//couldnt get score to pop up
 		//sceneManager.transform.GetComponent("scrptManager").AddScore();
