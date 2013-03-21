@@ -9,7 +9,7 @@ public class SpawnPlayer : Photon.MonoBehaviour
     public Transform playerPrefab;
     private List<PlayerMovement> playerScripts = new List<PlayerMovement>();
 
-    void OnCreatedRoom()
+	void Awake()
     {
         //Spawn a player for the server itself
         Spawnplayer(PhotonNetwork.player);

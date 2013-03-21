@@ -6,8 +6,6 @@ public class Connect : Photon.MonoBehaviour
 
     /*
      * We want this script to automatically connect to Photon and to enter a room.
-     * This will help speed up debugging in the next tutorials.
-     * 
      * In Awake we connect to the Photon server(/cloud).
      * Via OnConnectedToPhoton(); we will either join an existing room (if any), otherwise create one. 
      */
@@ -29,7 +27,6 @@ public class Connect : Photon.MonoBehaviour
             GUILayout.BeginVertical();
             if (GUILayout.Button("Connect"))
             {
-                //Connect using the PUN wizard settings (Self-hosted server or Photon cloud)
                 PhotonNetwork.ConnectUsingSettings("1.0");
             }
             GUILayout.EndVertical();

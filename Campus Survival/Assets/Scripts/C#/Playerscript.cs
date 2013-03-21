@@ -11,9 +11,27 @@ public class Playerscript : Photon.MonoBehaviour
     private float lastClientVInput = 0;
 
     //The input values the server will execute on this object
-    private float serverCurrentHInput = 0;
+    //Movement variables
+	private float serverCurrentHInput = 0;
     private float serverCurrentVInput = 0;
+	string key = "up";
+	string direc = "up";
+	bool moving	 = false;
+	float spacevalue = 1;
+	
+	// Players speed
+	float speed = 20.0f;
+	
+	GameObject upSocket;
+	GameObject leftSocket;
+	GameObject rightSocket;
+	GameObject downSocket;
 
+	Texture2D upTexture;
+	Texture2D leftTexture;
+	Texture2D rightTexture;
+	Texture2D downTexture;
+	
 
     void Awake()
     {
@@ -31,7 +49,7 @@ public class Playerscript : Photon.MonoBehaviour
         owner = player;
         if (player == PhotonNetwork.player)
         {
-            //Hey thats us! We can control this player: enable this script (this enables Update());
+            //We can control this player: enable this script (this enables Update());
             enabled = true;
         }
     }
@@ -45,6 +63,7 @@ public class Playerscript : Photon.MonoBehaviour
             //Only the client that owns this object executes this code
             float HInput = Input.GetAxis("Horizontal");
             float VInput = Input.GetAxis("Vertical");
+	
 
             //Is our input different? Do we need to update the server?
             if (lastClientHInput != HInput || lastClientVInput != VInput)
@@ -63,9 +82,19 @@ public class Playerscript : Photon.MonoBehaviour
         if (PhotonNetwork.isMasterClient)
         {            
             //Actually move the player using his/her input
-            Vector3 moveDirection = new Vector3(serverCurrentHInput, 0, serverCurrentVInput);
-            float speed = 5;
-            transform.Translate(speed * moveDirection * Time.deltaTime);
+            //Vector3 moveDirection = new Vector3(serverCurrentHInput, 0, serverCurrentVInput);
+            //transform.Translate(speed * moveDirection * Time.deltaTime);
+			//Players movement
+			if(Input.GetKey (KeyCode.LeftArrow)) {
+				left();
+			}	else if (Input.GetKey (KeyCode.RightArrow)) {
+				right();	
+			}	else if (Input.GetKey (KeyCode.UpArrow)) {
+				up();	
+			}	else if (Input.GetKey (KeyCode.DownArrow)) {
+				down();	
+			} else moving = false;
+			//	Debug.LogError(key);
         }
 
         /*if (PhotonNetwork.isNonMasterClientInGame)
@@ -112,4 +141,61 @@ public class Playerscript : Photon.MonoBehaviour
 
         }
     }
+	void left () {
+	key = "left";
+	moving = true;
+	//transform.Translate(Vector3(0.3,0,0) * speed * Time.deltaTime);
+	rigidbody.AddForce (250 * speed * spacevalue, 0, 0);
+	if (spacevalue == 1){
+		direc = "left";
+		upSocket.active = false;
+		downSocket.active = false;
+		leftSocket.active = true;
+		rightSocket.active = false;
+		renderer.material.mainTexture = leftTexture;
+		GameObject.Find("Main Camera").SendMessage("left");
+	} 
+}
+	void right () {
+	key = "right";
+	moving = true;
+	rigidbody.AddForce (-250 * speed * spacevalue, 0, 0);
+	if (spacevalue == 1){
+		direc = "right";
+		upSocket.active = false;
+		downSocket.active = false;
+		leftSocket.active = false;
+		rightSocket.active = true;
+		renderer.material.mainTexture = rightTexture;
+		GameObject.Find("Main Camera").SendMessage("right");
+	} 
+}
+	void up () {
+	key = "up";
+	moving = true;
+	rigidbody.AddForce (0, 250 * speed * spacevalue, 0);
+	if (spacevalue == 1){
+		direc = "up";
+		upSocket.active = true;
+		downSocket.active = false;
+		leftSocket.active = false;
+		rightSocket.active = false;
+		renderer.material.mainTexture = upTexture;
+		GameObject.Find("Main Camera").SendMessage("up");
+	} 
+}
+	void down () {
+	key = "down";
+	moving = true;
+	rigidbody.AddForce (0, -250 * speed * spacevalue, 0);
+	if (spacevalue == 1){
+		direc = "down";
+		upSocket.active = false;
+		downSocket.active = true;
+		leftSocket.active = false;
+		rightSocket.active = false;
+		renderer.material.mainTexture = downTexture;
+		GameObject.Find("Main Camera").SendMessage("down");
+	} 
+	}
 }
