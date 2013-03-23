@@ -6,8 +6,10 @@ var projectileRight		: Transform;
 var spawn				: Transform;
 var gun 				: int = 1;
 var touchingZombie		: boolean = false;
+var touchingBlueLight	: boolean = false;
 var playerNumber		: String;
 var touchedZombie 		: Collider;
+var touchedBlueLight	: Collider;
 var counter				: int = 0;
 var player 				: Transform;
 
@@ -51,7 +53,11 @@ function fire() {
 
 function place() {
 	if (touchingZombie){
-	touchedZombie.SendMessage(playerNumber);
+		touchedZombie.SendMessage(playerNumber);
+	}
+	else if (touchingBlueLight) {
+		touchedBlueLight.SendMessage("activate");
+		
 	}
 	else {
 		matPos = transform.position;
@@ -80,16 +86,24 @@ function OnTriggerStay (other: Collider) {
 		touchedZombie = other;
 		//other.SendMessage(playerNumber);
 	}	
+	else if (other.tag == "BlueLight") {
+		touchingBlueLight = true;
+		touchedBlueLight = other;
+		//other.SendMessage(playerNumber);
+	}
 	
 
 }
 
 function OnTriggerExit (other: Collider) {
 	touchingZombie = false;
+	touchingBlueLight = false;
 	}
 	
 	
 function Update () {
+	touchingZombie = false;
+	touchingBlueLight = false;
 	//Create a bullet
 	
 	
