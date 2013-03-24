@@ -4,6 +4,7 @@ using System.Collections;
 public class BlueLight : MonoBehaviour {
 	public Transform activateObject;
 	private int health = 10;
+	public GameObject[] zombies;
 	
 	
 	void activate () {
@@ -21,6 +22,11 @@ public class BlueLight : MonoBehaviour {
 						
 			Destroy(gameObject);
 			Destroy(GameObject.Find("prf_Player5"));
+			zombies = GameObject.FindGameObjectsWithTag("Zombie");
+			
+			foreach (GameObject zombie in zombies) {
+				zombie.SendMessage("NoBlueLight");
+			}
 		}
 		else health--;	
 	}

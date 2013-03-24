@@ -58,6 +58,14 @@ public class src_RealZombie : MonoBehaviour {
 	public AudioClip zhit;
 	
  	
+	
+	
+	public void NoBlueLight() {
+		directionLastSeen = Vector3.zero;
+	}
+	
+	
+	
 	// replaces zombie with knocked out zombie when shot enough times
 	void shot () {
 		audio.PlayOneShot(zhit);
@@ -117,31 +125,37 @@ public class src_RealZombie : MonoBehaviour {
 	
 	// Returns the distance between the zombie and a target name
 	int getDistance(string name) {
-		int theDistance;
+		int theDistance;		
+		
 		if(GameObject.Find(name) != null) {
-			theDistance = (int)(GameObject.Find(name).transform.position - transform.position).sqrMagnitude;
-			return theDistance;
+				theDistance = (int)(GameObject.Find(name).transform.position - transform.position).sqrMagnitude;
+				return theDistance;
+			
 		}
-		else return 1000; //in case the player doesn't exist, just return a large range
+		else return 10000000; //in case the player doesn't exist, just return a large range
 	}
 	
-	// Dillon's Motherfucking Magical Sort Array
+	// Dillon's Motherfucking Magical Sort Array (Fixed by Jon)
 	int[,] sortArray(int[,] array) {
 		//yes we need 2 for-loops
-		for (int i=0; i < 3; i++) {
+		for (int i=0; i < 4; i++) {
 			//find the min
-			for (int x=0; x < 3; x++) {
+			int min = 10000001; // (need to state a min value)
+			for (int x=i; x < 4; x++) { // (need to start at the first position, then the second, and so on)
 				if(min > array[x, 0]) {
+//Debug.LogError("Test");
 					min = array[x, 0];	//Max value in array
 					minpos = x;			//Position of max value
 					temp = array[i, 0];
 					// Sets the new values ordered properly
 					array[i, 0] = min;
-					array[minpos, 0] = temp;	
+					array[minpos, 0] = temp;
+//Debug.LogError(array[0,0] + " " + array[1,0] + " " + array[2,0] + " " + array[3,0] + " " + array[4,0]);
 				}
 			
 			}
 		}
+//Debug.LogError(array[0,0] + " " + array[1,0] + " " + array[2,0] + " " + array[3,0] + " " + array[4,0]);
 		return array;
 	}
 	// Treat this as a while loop, as the game runs
@@ -157,7 +171,16 @@ public class src_RealZombie : MonoBehaviour {
 		// goes through to make sure they can see the player
 		// if not, zombie will check the next closest person if he can see them
 		for (int i=0; i < 4; i++) {
-			if(GameObject.Find("prf_Player" + priority[i, 1]) != null &&
+			if(GameObject.Find("prf_Player5") != null) { // if its the blue light
+Debug.LogError("Chasing Blue");
+				target = GameObject.Find("prf_Player5").transform;
+					targetDirection = target.position; // Sets the constantly changing position
+					distance = Vector3.Distance(transform.position, targetDirection);
+					currentPosition = transform.position;	
+					chase = true;
+					break;	
+			}
+			else if(GameObject.Find("prf_Player" + priority[i, 1]) != null &&
 				zChaseRange > priority[i, 0] &&
 				IsVisible("prf_Player" + priority[i, 1])) {
 					//Debug.LogError("Player distance:" + priority[i, 0]);
