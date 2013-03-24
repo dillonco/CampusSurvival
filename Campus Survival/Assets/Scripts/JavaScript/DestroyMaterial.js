@@ -1,7 +1,8 @@
 #pragma strict
 
-function Start () {
 
+function Start () {
+	Physics.IgnoreCollision(transform.collider, GameObject.Find("prf_Player1").collider);
 }
 
 function Update () {

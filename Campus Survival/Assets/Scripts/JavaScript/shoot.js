@@ -72,16 +72,16 @@ function place() {
 		matPos.x += Random.Range(-1.0f,1.0f);
 		matPos.y += Random.Range(-1.0f,1.0f);
 		var mat3 = Instantiate(spawn, matPos, transform.rotation) as Transform;
-		Physics.IgnoreCollision(mat1.collider, player.collider);
-		Physics.IgnoreCollision(mat2.collider, player.collider);
-		Physics.IgnoreCollision(mat3.collider, player.collider);
+		//Physics.IgnoreCollision(mat1.collider, player.collider);
+		//Physics.IgnoreCollision(mat2.collider, player.collider);
+		//Physics.IgnoreCollision(mat3.collider, player.collider);
 	
 	
 	}
 }	
 
 function OnTriggerStay (other: Collider) {	
-	if (other.tag == "Zombie") {
+	if (other.tag == "Zombie" || other.tag == "KOZ") {
 		touchingZombie = true;
 		touchedZombie = other;
 		//other.SendMessage(playerNumber);
