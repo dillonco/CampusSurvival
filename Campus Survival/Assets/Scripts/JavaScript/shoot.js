@@ -60,18 +60,18 @@ function place() {
 		
 	}
 	else {
-		matPos = transform.position;
-		matPos.x += Random.Range(-1.0f,1.0f);
-		matPos.y += Random.Range(-1.0f,1.0f);
-		var mat1 = Instantiate(spawn, matPos, transform.rotation) as Transform;
-		matPos = transform.position;
-		matPos.x += Random.Range(-1.0f,1.0f);
-		matPos.y += Random.Range(-1.0f,1.0f);
-		var mat2 = Instantiate(spawn, matPos, transform.rotation) as Transform;
-		matPos = transform.position;
-		matPos.x += Random.Range(-1.0f,1.0f);
-		matPos.y += Random.Range(-1.0f,1.0f);
-		var mat3 = Instantiate(spawn, matPos, transform.rotation) as Transform;
+		//matPos = transform.position;
+		//matPos.x += Random.Range(-1.0f,1.0f);
+		//matPos.y += Random.Range(-1.0f,1.0f);
+		var mat1 = Instantiate(spawn, transform.position, transform.rotation) as Transform;
+		//matPos = transform.position;
+		//matPos.x += Random.Range(-1.0f,1.0f);
+		//matPos.y += Random.Range(-1.0f,1.0f);
+		//var mat2 = Instantiate(spawn, matPos, transform.rotation) as Transform;
+		//matPos = transform.position;
+		//matPos.x += Random.Range(-1.0f,1.0f);
+		//matPos.y += Random.Range(-1.0f,1.0f);
+		//var mat3 = Instantiate(spawn, matPos, transform.rotation) as Transform;
 		//Physics.IgnoreCollision(mat1.collider, player.collider);
 		//Physics.IgnoreCollision(mat2.collider, player.collider);
 		//Physics.IgnoreCollision(mat3.collider, player.collider);
