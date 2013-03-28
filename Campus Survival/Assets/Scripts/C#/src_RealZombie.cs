@@ -172,7 +172,7 @@ public class src_RealZombie : MonoBehaviour {
 		// if not, zombie will check the next closest person if he can see them
 		for (int i=0; i < 4; i++) {
 			if(GameObject.Find("prf_Player5") != null) { // if its the blue light
-Debug.LogError("Chasing Blue");
+//Debug.LogError("Chasing Blue");
 				target = GameObject.Find("prf_Player5").transform;
 					targetDirection = target.position; // Sets the constantly changing position
 					distance = Vector3.Distance(transform.position, targetDirection);
@@ -280,7 +280,7 @@ Debug.LogError("Chasing Blue");
 			walkSpeed = 2f;
 		}
 		// Once you run into the Player, attack him!
-		else if(other.gameObject.tag == "Player" || other.gameObject.tag == "Spawn1" || other.gameObject.tag == "Spawn2") {
+		else if(other.gameObject.tag == "Player" || other.gameObject.tag == "Spawn1" || other.gameObject.tag == "Spawn2" || other.gameObject.tag == "BlueLight") {
 			sec += 0.01f;
 			float waiting = (sec % 1);
 			

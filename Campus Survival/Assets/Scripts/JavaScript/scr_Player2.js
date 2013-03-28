@@ -135,8 +135,8 @@ function Update () {
 	//	Debug.LogError(key);
 	
 	// Setting the range of the map
-	transform.position.x = Mathf.Clamp(transform.position.x, horizontalMin, horizontalMax);
-	transform.position.y = Mathf.Clamp(transform.position.y, verticalMin, verticalMax);
+	//transform.position.x = Mathf.Clamp(transform.position.x, horizontalMin, horizontalMax);
+	//transform.position.y = Mathf.Clamp(transform.position.y, verticalMin, verticalMax);
 
 
 	
