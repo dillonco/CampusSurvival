@@ -51,8 +51,10 @@ public class src_RealZombie : MonoBehaviour {
 	public float sec = 0;
 	
 	// for the stupid sort array;
-	public int min = 501;
-	public int temp;
+	public int min0 = 10000001;
+	public int min1;
+	public int temp0;
+	public int temp1;
 	public int minpos;
 	public AudioClip attack;
 	public AudioClip zhit;
@@ -110,6 +112,7 @@ public class src_RealZombie : MonoBehaviour {
 	// To fix this, set kinematic to yes in rigidbody of the player
 	// this also breaks the current player movement
 	bool IsVisible(string targetName){ // checks to see if given object is visible and is a target
+		//Debug.LogError(targetName);
 		targetDirection = GameObject.Find(targetName).transform.position;
 		if (Physics.Linecast (transform.position, targetDirection, out hit)) {
 				// You can see the object
@@ -140,22 +143,26 @@ public class src_RealZombie : MonoBehaviour {
 		//yes we need 2 for-loops
 		for (int i=0; i < 4; i++) {
 			//find the min
-			int min = 10000001; // (need to state a min value)
+			int min0 = 10000001; // (need to state a min value)
 			for (int x=i; x < 4; x++) { // (need to start at the first position, then the second, and so on)
-				if(min > array[x, 0]) {
+				if(min0 > array[x, 0]) {
 //Debug.LogError("Test");
-					min = array[x, 0];	//Max value in array
+					min0 = array[x, 0];	//Max value in array
+					min1 = array[x, 1]; // (player number of max value)
 					minpos = x;			//Position of max value
-					temp = array[i, 0];
+					temp0 = array[i, 0];
+					temp1 = array[i, 1];
 					// Sets the new values ordered properly
-					array[i, 0] = min;
-					array[minpos, 0] = temp;
+					array[i, 0] = min0;
+					array[i, 1] = min1;
+					array[minpos, 0] = temp0;
+					array[minpos, 1] = temp1;
 //Debug.LogError(array[0,0] + " " + array[1,0] + " " + array[2,0] + " " + array[3,0] + " " + array[4,0]);
 				}
 			
 			}
 		}
-//Debug.LogError(array[0,0] + " " + array[1,0] + " " + array[2,0] + " " + array[3,0] + " " + array[4,0]);
+//Debug.LogError(array[0,0] + " " + array[1,0] + " " + array[2,0] + " " + array[3,0]);
 		return array;
 	}
 	// Treat this as a while loop, as the game runs

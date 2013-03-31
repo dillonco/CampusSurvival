@@ -6,6 +6,7 @@ var spawnY				: float;
 var noBase				: boolean = true;
 var materials 			: Transform;
 var respawning			: boolean = false;
+var boost				: int = 1;
 
 // Players speed
 var speed		: float = 20.0;
@@ -58,8 +59,8 @@ function left () {
 	key = "left";
 	moving2 = true;
 	//transform.Translate(Vector3(0.3,0,0) * speed * Time.deltaTime);
-	rigidbody.AddForce (250 * speed * spacevalue, 0, 0);
-	if (spacevalue == 1){
+	rigidbody.AddForce (250 * speed * boost * spacevalue, 0, 0);
+	if (spacevalue >= 1){
 		direc = "left";
 		upSocket.active = false;
 		downSocket.active = false;
@@ -73,8 +74,8 @@ function right () {
 	key = "right";
 	moving2 = true;
 	//transform.Translate(Vector3(-0.3,0,0) * speed * Time.deltaTime);
-	rigidbody.AddForce (-250 * speed * spacevalue, 0, 0);
-	if (spacevalue == 1){
+	rigidbody.AddForce (-250 * speed * boost * spacevalue, 0, 0);
+	if (spacevalue >= 1){
 		direc = "right";
 		upSocket.active = false;
 		downSocket.active = false;
@@ -88,8 +89,8 @@ function up () {
 	key = "up";
 	moving2 = true;
 	//transform.Translate(Vector3(0,0.3,0) * speed * Time.deltaTime);
-	rigidbody.AddForce (0, 250 * speed * spacevalue, 0);
-	if (spacevalue == 1){
+	rigidbody.AddForce (0, 250 * speed * boost * spacevalue, 0);
+	if (spacevalue >= 1){
 		direc = "up";
 		upSocket.active = true;
 		downSocket.active = false;
@@ -103,8 +104,8 @@ function down () {
 	key = "down";
 	moving2 = true;
 	//transform.Translate(Vector3(0,-0.3,0) * speed * Time.deltaTime);
-	rigidbody.AddForce (0, -250 * speed * spacevalue, 0);
-	if (spacevalue == 1){
+	rigidbody.AddForce (0, -250 * speed * boost * spacevalue, 0);
+	if (spacevalue >= 1){
 		direc = "down";
 		upSocket.active = false;
 		downSocket.active = true;
@@ -153,6 +154,8 @@ function Update () {
 	if (counter == firerate) counter = 0;
 	else if (counter > 0) counter++;
 	
+	if (spacevalue == 0.5) spacevalue = 1;
+	
 	if(Input.GetKey(KeyCode.LeftShift)) {
 		
 		spacevalue = 0.5;
@@ -168,7 +171,7 @@ function Update () {
 		}
 	}
 	else if(Input.GetKey(KeyCode.Q) && materialStash > 0) {
-		if (materialStash >= 100 && noBase == true){
+		if (materialStash >= 100 && noBase == true && inZone == true){
 			materialStash = materialStash - 100;
 			var currentPos = transform.position;
 			spawnX = currentPos.x;
@@ -191,8 +194,17 @@ function Update () {
 			}
 		}
 	}
-	else spacevalue = 1;
+	//else spacevalue = 1;
 
+	else if (Input.GetKey(KeyCode.LeftControl) && spacevalue == 1 && counter == 0) {
+		spacevalue = 2;
+		counter = 1;
+	}
+	else if (Input.GetKey(KeyCode.LeftControl) && spacevalue == 2 && counter == 0) {
+		spacevalue = 1;
+		counter = 1;
+	}
+	
 	
 } // end update
 

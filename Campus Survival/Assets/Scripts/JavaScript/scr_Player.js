@@ -6,7 +6,7 @@ var spawnY				: float;
 var noBase				: boolean = true;
 var materials 			: Transform;
 var respawning			: boolean = false;
-
+var boost				: int = 1;
 // Players speed
 var speed		: float = 20.0;
 //Health 
@@ -58,8 +58,8 @@ function left () {
 	key = "left";
 	moving = true;
 	//transform.Translate(Vector3(0.3,0,0) * speed * Time.deltaTime);
-	rigidbody.AddForce (250 * speed * spacevalue, 0, 0);
-	if (spacevalue == 1){
+	rigidbody.AddForce (250 * speed * boost * spacevalue, 0, 0);
+	if (spacevalue >= 1){
 		direc = "left";
 		upSocket.active = false;
 		downSocket.active = false;
@@ -76,8 +76,8 @@ function left () {
 function right () {
 	key = "right";
 	moving = true;
-	rigidbody.AddForce (-250 * speed * spacevalue, 0, 0);
-	if (spacevalue == 1){
+	rigidbody.AddForce (-250 * speed * boost * spacevalue, 0, 0);
+	if (spacevalue >= 1){
 		direc = "right";
 		upSocket.active = false;
 		downSocket.active = false;
@@ -94,8 +94,8 @@ function right () {
 function up () {
 	key = "up";
 	moving = true;
-	rigidbody.AddForce (0, 250 * speed * spacevalue, 0);
-	if (spacevalue == 1){
+	rigidbody.AddForce (0, 250 * speed * boost * spacevalue, 0);
+	if (spacevalue >= 1){
 		direc = "up";
 		upSocket.active = true;
 		downSocket.active = false;
@@ -112,8 +112,8 @@ function up () {
 function down () {
 	key = "down";
 	moving = true;
-	rigidbody.AddForce (0, -250 * speed * spacevalue, 0);
-	if (spacevalue == 1){
+	rigidbody.AddForce (0, -250 * speed * boost * spacevalue, 0);
+	if (spacevalue >= 1){
 		direc = "down";
 		upSocket.active = false;
 		downSocket.active = true;
@@ -170,6 +170,9 @@ function Update () {
 	if (counter == firerate) counter = 0;
 	else if (counter > 0) counter++;
 	
+	if (spacevalue == 0.5) spacevalue = 1;
+	
+	
 	if(Input.GetKey("space")) {
 		
 		spacevalue = 0.5;
@@ -209,7 +212,16 @@ function Update () {
 		
 		}
 	}
-	else spacevalue = 1;
+	//else spacevalue = 1;
+
+	else if (Input.GetKey(KeyCode.RightControl) && spacevalue == 1 && counter == 0) {
+		spacevalue = 2;
+		counter = 1;
+	}
+	else if (Input.GetKey(KeyCode.RightControl) && spacevalue == 2 && counter == 0) {
+		spacevalue = 1;
+		counter = 1;
+	}
 	
 	/*if (Input.GetKey(KeyCode.RightControl) && counter == 0) {
 		if (gun == 3) {
