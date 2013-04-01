@@ -140,7 +140,7 @@ public class ThirdPersonController : MonoBehaviour
 
         // Right vector relative to the camera
         // Always orthogonal to the forward vector
-        Vector3 right = new Vector3(forward.z, 0, -forward.x);
+        Vector3 right = new Vector3(forward.z, -forward.x, 0);
 
         float v = Input.GetAxisRaw("Vertical");
         float h = Input.GetAxisRaw("Horizontal");

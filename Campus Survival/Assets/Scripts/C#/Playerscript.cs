@@ -14,6 +14,11 @@ public class Playerscript : Photon.MonoBehaviour
     //Movement variables
 	private float serverCurrentHInput = 0;
     private float serverCurrentVInput = 0;
+	
+	private Vector3 movement;
+	private Vector3 serverMovement;
+	private Vector3 currentPosition;
+	
 	string key = "up";
 	string direc = "up";
 	bool moving	 = false;
@@ -43,6 +48,7 @@ public class Playerscript : Photon.MonoBehaviour
             enabled = false;	 // disable this script (this disables Update());	
         }
     }
+	
     [RPC]
     void SetPlayer(PhotonPlayer player)
     {
@@ -61,30 +67,6 @@ public class Playerscript : Photon.MonoBehaviour
         if (PhotonNetwork.player == owner)
         {
             //Only the client that owns this object executes this code
-            float HInput = Input.GetAxis("Horizontal");
-            float VInput = Input.GetAxis("Vertical");
-	
-
-            //Is our input different? Do we need to update the server?
-            if (lastClientHInput != HInput || lastClientVInput != VInput)
-            {
-                lastClientHInput = HInput;
-                lastClientVInput = VInput;
-                
-                //SendMovementInput(HInput, VInput); //Use this (and line 62) for simple "prediction"
-                photonView.RPC("SendMovementInput", PhotonTargets.MasterClient, HInput, VInput);
-                
-            }
-        }
-
-        //MasterCLient movement code
-        //To also enable this on the client itself, use: " if (PhotonNetwork.isMasterClient || PhotonNetwork.player==owner){  "
-        if (PhotonNetwork.isMasterClient)
-        {            
-            //Actually move the player using his/her input
-            //Vector3 moveDirection = new Vector3(serverCurrentHInput, 0, serverCurrentVInput);
-            //transform.Translate(speed * moveDirection * Time.deltaTime);
-			//Players movement
 			if(Input.GetKey (KeyCode.LeftArrow)) {
 				left();
 			}	else if (Input.GetKey (KeyCode.RightArrow)) {
@@ -94,7 +76,31 @@ public class Playerscript : Photon.MonoBehaviour
 			}	else if (Input.GetKey (KeyCode.DownArrow)) {
 				down();	
 			} else moving = false;
-			//	Debug.LogError(key);
+			currentPosition = transform.position;
+            //Is our input different? Do we need to update the server?
+            //if (lastClientHInput != HInput || lastClientVInput != VInput)
+            //{
+             //   lastClientHInput = HInput;
+              //  lastClientVInput = VInput;
+           
+	        //Debug.LogError(movement);
+
+                //SendMovementInput(HInput, VInput); //Use this (and line 62) for simple "prediction"
+          	photonView.RPC("SendMovementInput", PhotonTargets.MasterClient, currentPosition);
+
+         //   }
+        }
+
+        //MasterCLient movement code
+        //To also enable this on the client itself, use: " if (PhotonNetwork.isMasterClient || PhotonNetwork.player==owner){  "
+        if (PhotonNetwork.isMasterClient || PhotonNetwork.player==owner)
+        {            
+            //Actually move the player using his/her input
+            //Vector3 moveDirection = new Vector3(serverCurrentHInput, 0, serverCurrentVInput);
+            transform.position = serverMovement; //* Time.deltaTime
+			//Players movement
+			//Debug.LogError(serverMovement);
+
         }
 
         /*if (PhotonNetwork.isNonMasterClientInGame)
@@ -106,11 +112,10 @@ public class Playerscript : Photon.MonoBehaviour
 
 
     [RPC]
-    void SendMovementInput(float HInput, float VInput)
+    void SendMovementInput(string Movement)
     {
         //Called on the server
-        serverCurrentHInput = HInput;
-        serverCurrentVInput = VInput;
+        serverMovement = movement;
     }
 
 
@@ -144,8 +149,10 @@ public class Playerscript : Photon.MonoBehaviour
 	void left () {
 	key = "left";
 	moving = true;
+		
+	rigidbody.AddForce (250 * speed * spacevalue, 0,0);
 	//transform.Translate(Vector3(0.3,0,0) * speed * Time.deltaTime);
-	rigidbody.AddForce (250 * speed * spacevalue, 0, 0);
+	movement = new Vector3(250 * speed * spacevalue, 0, 0);
 	if (spacevalue == 1){
 		direc = "left";
 		upSocket.active = false;
@@ -160,6 +167,7 @@ public class Playerscript : Photon.MonoBehaviour
 	key = "right";
 	moving = true;
 	rigidbody.AddForce (-250 * speed * spacevalue, 0, 0);
+	//movement = new Vector3(-250 * speed * spacevalue, 0, 0);
 	if (spacevalue == 1){
 		direc = "right";
 		upSocket.active = false;
@@ -174,6 +182,7 @@ public class Playerscript : Photon.MonoBehaviour
 	key = "up";
 	moving = true;
 	rigidbody.AddForce (0, 250 * speed * spacevalue, 0);
+	//movement = new Vector3(0, 250 * speed * spacevalue, 0);
 	if (spacevalue == 1){
 		direc = "up";
 		upSocket.active = true;
@@ -188,6 +197,7 @@ public class Playerscript : Photon.MonoBehaviour
 	key = "down";
 	moving = true;
 	rigidbody.AddForce (0, -250 * speed * spacevalue, 0);
+	//movement = new Vector3(0, -250 * speed * spacevalue, 0);
 	if (spacevalue == 1){
 		direc = "down";
 		upSocket.active = false;

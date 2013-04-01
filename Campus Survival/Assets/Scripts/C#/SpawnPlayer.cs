@@ -32,7 +32,7 @@ public class SpawnPlayer : Photon.MonoBehaviour
 
         //Instantiate a new object for this player, remember; the server is therefore the owner.
         Transform myNewTrans = PhotonNetwork.Instantiate(playerPrefab.name, transform.position, transform.rotation, 0).transform;
-
+		myNewTrans.name = "prf_Player1";
         //Get the networkview of this new transform
         PhotonView newObjectsview = myNewTrans.GetComponent<PhotonView>();
 
