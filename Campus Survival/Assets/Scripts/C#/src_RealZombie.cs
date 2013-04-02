@@ -265,11 +265,6 @@ public class src_RealZombie : MonoBehaviour {
 		// Note by Josh, for Josh: this is where you left off
     }
 	
-	public Vector3 getLocation() {
-		Vector3 zombieLocation = transform.position;
-		return zombieLocation;
-	}
-	
 	/*
 	// Patrol movement for the Zombie
 	void Patrol(Vector3 direction) {

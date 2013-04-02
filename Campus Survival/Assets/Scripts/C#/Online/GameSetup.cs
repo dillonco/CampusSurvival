@@ -108,9 +108,6 @@ public class GameSetup : Photon.MonoBehaviour
 
         Transform spawnpoint = spawnpoints[Random.Range(0, spawnpoints.Length)].transform;
         PhotonNetwork.Instantiate(playerPref.name, spawnpoint.position, spawnpoint.rotation, 0);
-		if (PhotonNetwork.isMasterClient) {
-				PhotonNetwork.Instantiate("SpawnZombie", spawnpoint.position, spawnpoint.rotation, 0);
-		}
     }
     void OnDisconnectedFromPhoton()
     {

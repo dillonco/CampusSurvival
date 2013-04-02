@@ -37,7 +37,7 @@ public class PlayerScript : Photon.MonoBehaviour
 
            transform.Find("CrateCamera").gameObject.active = false;
 
-            PlayerMovementOnline tmp2 = GetComponent<PlayerMovementOnline>() as PlayerMovementOnline;
+            PlayerMovement tmp2 = GetComponent<PlayerMovement>() as PlayerMovement;
             tmp2.enabled = false;
         }
     }

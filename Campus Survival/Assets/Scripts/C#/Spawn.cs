@@ -6,7 +6,7 @@ public class Spawn : MonoBehaviour {
 
 	public Transform spawn;
 	public int counter = 1;
-	public int max = 1200;
+	public int max = 30;
 
 	// Use this for initialization
 	void Start () {
@@ -14,12 +14,10 @@ public class Spawn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (PhotonNetwork.isMasterClient) {
-			if (counter == 50) {
-				PhotonNetwork.Instantiate("SpawnZombie", transform.position, transform.rotation, 0);
-				//counter = 1;
-			}
-			else counter++;
+		if (counter == max) {
+			Instantiate(spawn, transform.position, transform.rotation);
+			counter = 1;
 		}
+		else counter++;
 	}
 }
