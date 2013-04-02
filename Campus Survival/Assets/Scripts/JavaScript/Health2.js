@@ -21,7 +21,7 @@ function shot () {
 }
 
 function OnTriggerEnter (other: Collider) {
-	if (other.gameObject.tag == "Bullet") {
+	if (other.gameObject.tag == "Bullet1") {
 		shot();
 	}
 }

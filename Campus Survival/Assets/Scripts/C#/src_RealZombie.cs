@@ -283,7 +283,7 @@ public class src_RealZombie : MonoBehaviour {
 	
 	IEnumerator OnCollisionStay(Collision other) {
 		// Once a Zombie hits a material, it stops, destroys it, and continues on
-		if (other.gameObject.tag == "Material Placed" || other.gameObject.tag == "Material Placed2") {
+		if (other.gameObject.tag == "Material Placed1" || other.gameObject.tag == "Material Placed2") {
 			runSpeed = 0f;
 			walkSpeed = 0f;
 			yield return new WaitForSeconds(0.5f);

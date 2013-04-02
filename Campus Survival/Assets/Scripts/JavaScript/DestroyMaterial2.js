@@ -13,7 +13,7 @@ function destroy () {
 }
 
 function OnTriggerEnter (other: Collider) {
-	if(other.gameObject.tag == "Bullet") {
+	if(other.gameObject.tag == "Bullet1") {
 		Destroy(gameObject);
 	}
 }

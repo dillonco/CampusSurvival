@@ -6,6 +6,7 @@ public class Explode : MonoBehaviour {
 	public int health = 10;
 	public GameObject[] zombies;
 	public Transform brokenCar;
+	public AudioClip bulletSound;
 	
 	public src_RealZombie zombieScript;
 	
@@ -17,6 +18,12 @@ public class Explode : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+	
+	
+	void bullet () {
+		audio.PlayOneShot(bulletSound);
+		shot();
 	}
 	
 	void shot () {
