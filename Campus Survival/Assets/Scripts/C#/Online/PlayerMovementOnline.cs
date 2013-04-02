@@ -5,7 +5,7 @@ public class PlayerMovementOnline : MonoBehaviour
 {
     public float speed = 2.0f;
 
-    private Vector3 moveDirection = Vector3.zero;
+//    private Vector3 moveDirection = Vector3.zero;
 	string key = "up";
 	string direc = "up";
 	bool moving	 = false;
