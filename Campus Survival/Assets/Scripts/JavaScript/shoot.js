@@ -46,10 +46,8 @@ function deactivate() {
 function fire() {
 	 
 	bullet = Instantiate(projectile, transform.position, transform.rotation);
-	bullet.name = "Bullet";
 	bullet.tag = "Bullet" + PlrNum;
 	bullet.SendMessage("setPlr", player);
-	bullet.SendMessage("setNum", PlrNum);
 	//if (gun == 2) {
 		//Instantiate(projectileLeft, transform.position, transform.rotation);
 		//Instantiate(projectileRight, transform.position, transform.rotation);
@@ -69,7 +67,6 @@ function place() {
 		//matPos.x += Random.Range(-1.0f,1.0f);
 		//matPos.y += Random.Range(-1.0f,1.0f);
 		var mat1 = Instantiate(spawn, transform.position, transform.rotation) as Transform;
-		mat1.name = "Material Placed";
 		//matPos = transform.position;
 		//matPos.x += Random.Range(-1.0f,1.0f);
 		//matPos.y += Random.Range(-1.0f,1.0f);

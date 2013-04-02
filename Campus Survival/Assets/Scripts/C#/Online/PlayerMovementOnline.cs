@@ -50,7 +50,7 @@ public class PlayerMovementOnline : MonoBehaviour
             }
             else
             {
-//                moveDirection = Vector3.zero;
+                moveDirection = Vector3.zero;
             }
 
         // Move the controller

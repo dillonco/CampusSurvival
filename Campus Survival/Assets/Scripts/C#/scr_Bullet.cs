@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 
 public class scr_Bullet : MonoBehaviour {
-	public string plrNum;
 	public string player;
 	public float bulletSpeed = 30.0f;
 	//public GameObject sceneManager;
@@ -16,9 +15,6 @@ public class scr_Bullet : MonoBehaviour {
 	void setPlr (Transform plr) {
 		player = plr.name;
 	}
-	void setNum (string num) {
-		plrNum = num;
-	}
 	
 	
 	void OnTriggerEnter (Collider other) {
@@ -29,15 +25,11 @@ public class scr_Bullet : MonoBehaviour {
 		//sceneManager.transform.GetComponent("scrptManager").AddScore();
 		
 		//Destroy(other.gameObject);
-		if (other.gameObject.tag == "Car") {
-			other.SendMessage("bullet");
-		}
-		else other.SendMessage("shot");
+		other.SendMessage("shot");
 		Destroy(gameObject);
 		}
-	else if(other.gameObject.tag == "Block" || other.gameObject.name == "Material Placed" && other.gameObject.tag != "Material Placed" + plrNum || other.gameObject.tag == "Spawn2") {
-//Debug.LogError(other.gameObject.name);
-//Debug.LogError(other.gameObject.tag);
+	else if(other.gameObject.tag == "Block" || other.gameObject.tag == "Material Placed2" || other.gameObject.tag == "Spawn2")
+	{
 		Destroy(gameObject);	
 	}	
 	
