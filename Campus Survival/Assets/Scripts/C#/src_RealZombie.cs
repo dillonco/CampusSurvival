@@ -57,9 +57,7 @@ public class src_RealZombie : MonoBehaviour {
 	public int temp1;
 	public int minpos;
 	public AudioClip attack;
-	public AudioClip zhit;
-	
- 	
+	public AudioClip zhit; 	
 	
 	
 	public void NoBlueLight() {

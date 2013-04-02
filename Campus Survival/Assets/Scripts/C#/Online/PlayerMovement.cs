@@ -11,18 +11,8 @@ public class FPSWalker4 : MonoBehaviour
 	bool moving	 = false;
 	float spacevalue = 1;
 	
-	GameObject upSocket;
-	GameObject leftSocket;
-	GameObject rightSocket;
-	GameObject downSocket;
-	
 	private Vector3 movement;
 	private Vector3 currentPosition;
-	
-	Texture2D upTexture;
-	Texture2D leftTexture;
-	Texture2D rightTexture;
-	Texture2D downTexture;
 	
 
 
@@ -68,11 +58,6 @@ public class FPSWalker4 : MonoBehaviour
 	//movement = new Vector3(250 * speed * spacevalue, 0, 0);
 	if (spacevalue == 1){
 		direc = "left";
-		upSocket.active = false;
-		downSocket.active = false;
-		leftSocket.active = true;
-		rightSocket.active = false;
-		renderer.material.mainTexture = leftTexture;
 		GameObject.Find("Main Camera").SendMessage("left");
 	} 
 }
@@ -83,11 +68,6 @@ public class FPSWalker4 : MonoBehaviour
 	//movement = new Vector3(-250 * speed * spacevalue, 0, 0);
 	if (spacevalue == 1){
 		direc = "right";
-		upSocket.active = false;
-		downSocket.active = false;
-		leftSocket.active = false;
-		rightSocket.active = true;
-		renderer.material.mainTexture = rightTexture;
 		GameObject.Find("Main Camera").SendMessage("right");
 	} 
 }
@@ -98,11 +78,6 @@ public class FPSWalker4 : MonoBehaviour
 	//movement = new Vector3(0, 250 * speed * spacevalue, 0);
 	if (spacevalue == 1){
 		direc = "up";
-		upSocket.active = true;
-		downSocket.active = false;
-		leftSocket.active = false;
-		rightSocket.active = false;
-		renderer.material.mainTexture = upTexture;
 		GameObject.Find("Main Camera").SendMessage("up");
 	} 
 }
@@ -113,11 +88,6 @@ public class FPSWalker4 : MonoBehaviour
 	//movement = new Vector3(0, -250 * speed * spacevalue, 0);
 	if (spacevalue == 1){
 		direc = "down";
-		upSocket.active = false;
-		downSocket.active = true;
-		leftSocket.active = false;
-		rightSocket.active = false;
-		renderer.material.mainTexture = downTexture;
 		GameObject.Find("Main Camera").SendMessage("down");
 	} 
 	}

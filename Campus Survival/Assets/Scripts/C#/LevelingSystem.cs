@@ -3,8 +3,14 @@
  * Created: March 13, 2013
  * By Dillon
  * How to use
- * Call LevelingSystem.AdjustScore(int points);
+ * Call LevelingSystem.AdjustScore(int points, string player);
+ * Options for player are either "p1" or "p2"
  * Where points is a positive or negative int
+ * Example:
+ * 			//Adjust Player 2's level for the kill
+			LevelingSystem levelingSystem = GetComponent<LevelingSystem>();
+			levelingSystem.AdjustScore(1000, "p2");
+			Debug.LogError("1000 points to p2");
 -----------------------------------------------------------------------------*/
 
 using UnityEngine;
@@ -15,7 +21,7 @@ using System.Text;
 [RequireComponent(typeof(AudioSource))]
 public class LevelingSystem : MonoBehaviour {
 	// For audio file
-    public AudioClip[] nextLevelSound;
+    public AudioClip nextLevelSound;
 	//Max Level
     public int maxLevel = 15;
 	//Experiance needed for each level
@@ -25,66 +31,80 @@ public class LevelingSystem : MonoBehaviour {
 	// the last amount set above
     public int percentComplete = 100000;
 	//The current score
-    private int score = 0;
+    private int p1score = 0;
+	private int p2score = 0;
+
     //The player's current level.
-    private int level = 1;
+    private int p1level = 1;
+	private int p2level = 1;
 	//The Minimum level
     private const int MinimumLevel = 1;
 
     ///The player's score.
-    public int Score {
+    public int p1Score {
         get {
-            return score;
+            return p1score;
         }
 
         set {
-            score = value;
+            p1score = value;
+		}
+    }
+	///The player's score.
+    public int p2Score {
+        get {
+            return p2score;
+        }
+
+        set {
+            p2score = value;
 		}
     }
 
     //Adjust the score by the specified number of points. Negative values
     //will subtract points.
     //<param name="points" />Number of points to adjust the current score
-    public void AdjustScore(int points) {
-        score += points;
+    public void AdjustScore(int points, string player) {
+        if (player == "p1") { p1score += points; }
+		else if(player == "p2") p2score += points;
     }
 
-    // Adjust the current level by the specified number of levels. Negative
-    // values will subtract levels. Does not adjust the score to match. The
-    // new level will be clamped to within the maximum permitted level.
-    //<param name="levels" />Number of levels to adjust the current level
-    public void AdjustLevel(int levels) {
-        level = Mathf.Clamp(level + levels, MinimumLevel, maxLevel);
-    }
+//    // Adjust the current level manually
+//    public void AdjustLevel(int levels) {
+//        level = Mathf.Clamp(level + levels, MinimumLevel, maxLevel);
+//    }
 
     // The player's current level. Specifying a new level will ensure that the
     // new level is clamped to the maximum permitted level.
-    public int Level {
+    public int p1Level {
         get {
-            return level;
+            return p1level;
         }
 
         set {
-            level = Mathf.Clamp(value, MinimumLevel, maxLevel);
+            p1level = Mathf.Clamp(value, MinimumLevel, maxLevel);
+        }
+    }
+	public int p2Level {
+        get {
+            return p2level;
+        }
+
+        set {
+            p2level = Mathf.Clamp(value, MinimumLevel, maxLevel);
         }
     }
 
     // Play the audio for level up sound.
     public void PlayNextLevelSound() {
-        int levelUpIndex = Mathf.Clamp(level, MinimumLevel, 
-nextLevelSound.Length - 1) - 1;
-        if (nextLevelSound[levelUpIndex] == null) {
-            return;
-        }
-
-        this.audio.PlayOneShot(nextLevelSound[levelUpIndex]);
+        this.audio.PlayOneShot(nextLevelSound);
     }
 
     //Checks for completion of the current level and advances to the next
     // level if the score is high enough.
-    public virtual void CheckForLevelUp() {
+    public virtual void CheckForP1LevelUp() {
         // if we have reached the maximum level, do nothing
-        if (level >= maxLevel) {
+        if (p1level >= maxLevel) {
             return;
         }
 
@@ -93,22 +113,56 @@ nextLevelSound.Length - 1) - 1;
         // if there are no more scores in the level score progression array
         //      switch over to linear progression
         //      otherwise, use the non-linear progression
-        if (level >= nextLevelScore.Length) {
-            nextReqScore = (level - nextLevelScore.Length + 1) *
+        if (p1level >= nextLevelScore.Length) {
+            nextReqScore = (p1level - nextLevelScore.Length + 1) *
 percentComplete;
         }
         else {
-            nextReqScore = nextLevelScore[level];
+            nextReqScore = nextLevelScore[p1level];
         }
 
         // if we have the required score to level up, advance to the next level
-        if (score >= nextReqScore) {
-            level = Math.Min(level + 1, maxLevel);
+        if (p1score >= nextReqScore) {
+            p1level = Math.Min(p1level + 1, maxLevel);
             PlayNextLevelSound();
+			//INSERT CHANGES TO GLOBAL HEALTH, SPEED AND FIRERATE HERE
+			Debug.LogError("Player level up");
+        }
+    }
+	 public virtual void CheckForP2LevelUp() {
+        // if we have reached the maximum level, do nothing
+        if (p2level >= maxLevel) {
+            return;
+        }
+
+        // check for the next required score
+        int nextReqScore = 0;
+        // if there are no more scores in the level score progression array
+        //      switch over to linear progression
+        //      otherwise, use the non-linear progression
+        if (p2level >= nextLevelScore.Length) {
+            nextReqScore = (p2level - nextLevelScore.Length + 1) *
+percentComplete;
+        }
+        else {
+            nextReqScore = nextLevelScore[p2level];
+        }
+
+        // if we have the required score to level up, advance to the next level
+        if (p2score >= nextReqScore) {
+            p2level = Math.Min(p2level + 1, maxLevel);
+            PlayNextLevelSound();
+			//INSERT CHANGES TO GLOBAL HEALTH, SPEED AND FIRERATE HERE
+			Debug.LogError("Player level up");
         }
     }
 
     void Update() {
-        CheckForLevelUp();
+        CheckForP1LevelUp();
+		CheckForP2LevelUp();
     }
+	void OnGUI() {
+		GUILayout.Label("Player 1 level: " + p1Level);
+		GUILayout.Label("Player 2 level: " + p2Level);
+	}
 }
