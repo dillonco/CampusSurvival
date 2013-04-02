@@ -12,7 +12,8 @@ var touchedZombie 		: Collider;
 var touchedBlueLight	: Collider;
 var counter				: int = 0;
 var player 				: Transform;
-
+var bullet 				: Transform;
+var PlrNum 				: String;
 var matPos				: Vector3;
 
 
@@ -44,7 +45,9 @@ function deactivate() {
 	
 function fire() {
 	 
-	Instantiate(projectile, transform.position, transform.rotation);
+	bullet = Instantiate(projectile, transform.position, transform.rotation);
+	bullet.tag = "Bullet" + PlrNum;
+	bullet.SendMessage("setPlr", player);
 	//if (gun == 2) {
 		//Instantiate(projectileLeft, transform.position, transform.rotation);
 		//Instantiate(projectileRight, transform.position, transform.rotation);
