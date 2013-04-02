@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class FPSWalker4 : MonoBehaviour
+public class PlayerMovementOnline : MonoBehaviour
 {
     public float speed = 2.0f;
 
@@ -30,21 +30,21 @@ public class FPSWalker4 : MonoBehaviour
     {
             if (!FPSChat4.usingChat)
             {
-//            	if(Input.GetKey (KeyCode.LeftArrow)) {
-//					left();
-//				}	else if (Input.GetKey (KeyCode.RightArrow)) {
-//					right();	
-//				}	else if (Input.GetKey (KeyCode.UpArrow)) {
-//					up();	
-//				}	else if (Input.GetKey (KeyCode.DownArrow)) {
-//					down();	
-//				} else moving = false;
+            	if(Input.GetKey (KeyCode.LeftArrow)) {
+					left();
+				}	else if (Input.GetKey (KeyCode.RightArrow)) {
+					right();	
+				}	else if (Input.GetKey (KeyCode.UpArrow)) {
+					up();	
+				}	else if (Input.GetKey (KeyCode.DownArrow)) {
+					down();	
+				} else moving = false;
 				//currentPosition = transform.position;    
 			
 			// We are grounded, so recalculate movedirection directly from axes
-                moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-                moveDirection = transform.TransformDirection(moveDirection);
-                moveDirection *= speed;
+            //    moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+            //    moveDirection = transform.TransformDirection(moveDirection);
+            //    moveDirection *= speed;
 
               
             }
@@ -54,8 +54,8 @@ public class FPSWalker4 : MonoBehaviour
             }
 
         // Move the controller
-       CharacterController controller = GetComponent<CharacterController>() as CharacterController;
-       CollisionFlags flags = controller.Move(moveDirection);
+      // CharacterController controller = GetComponent<CharacterController>() as CharacterController;
+      // CollisionFlags flags = controller.Move(moveDirection);
        //grounded = (flags & CollisionFlags.CollidedBelow) != 0;
     }
 
