@@ -5,8 +5,6 @@ public class PlayerScript : Photon.MonoBehaviour
 {   
     public PhotonView rigidBodyView;
     public int hp = 100;
-	public int experiance = 0;
-	
     public ScoreBoard theScoreBoard;
     public bool localPlayer = false;
 
@@ -57,34 +55,17 @@ public class PlayerScript : Photon.MonoBehaviour
         }
         else
         {
-            photonView.RPC("setExperiance", PhotonTargets.Others, experiance);
+            photonView.RPC("setHP", PhotonTargets.Others, hp);
         }
     }
 
 
     [RPC]
-    void setExperiance(int newExperiance)
+    void setHP(int newHP)
     {
-        experiance = newExperiance;
+        hp = newHP;
     }
-	
-    void ApplyLevel(string[] info)
-    {
-        float points = float.Parse(info[0]);
-        //string killerName = info[1];
 
-        experiance -= (int)points;
-        if (experiance < 0)
-        {
-            theScoreBoard.LocalPlayerHasKilled();
-            photonView.RPC("Respawn", PhotonTargets.All);
-        }
-        else
-        {
-            photonView.RPC("setHP", PhotonTargets.Others, hp);
-        }
-    }
-	
     [RPC]
     void Respawn()
     {
