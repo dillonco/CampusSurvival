@@ -259,5 +259,12 @@ public function NoBase() {
 }
 
 public function OnGUI () {
-	GUI.Label(Rect(10,40,100,50),"Materials: " + materialStash.ToString());
+	if (respawning) {
+		GUI.Label(Rect(Screen.width/4,Screen.height/2,100,50),"YOU HAVE DIED");
+	}
+	
+	if (noBase) {
+		GUI.Label(Rect(10,40,100,50),"Materials: " + materialStash.ToString() + "\nNo Base");
+	}
+	else GUI.Label(Rect(10,40,100,50),"Materials: " + materialStash.ToString());
 }
