@@ -1,5 +1,6 @@
 //Player Script
 // Dillon: Jan 15
+var GameOverScreen		: Transform;
 var spawnPoint			: Transform;
 var spawnX				: float;
 var spawnY				: float;
@@ -291,8 +292,8 @@ public function Respawn() {
 		transform.position = newPos;
 		if (noBase){
 			Destroy(gameObject);
-			Debug.LogError("P1 loses!");
-			Debug.Break();
+			Destroy(GameObject.Find("prf_Player2"));
+			Instantiate(GameOverScreen, transform.position, transform.rotation);
 		}
 		GameObject.Find("prf_Player1").SendMessage("HealthRespawn");
 		//transform.position = spawnPoint.position;
