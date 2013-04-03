@@ -17,15 +17,22 @@ function Update () {
 
 function OnTriggerEnter (other : Collider) {
 
-	if(other.gameObject.tag == "Zombie" || other.gameObject.tag == "Car" || other.gameObject.tag == "BlueLight")
-	{
+//Debug.LogError(other);
+
+	if(other.gameObject.tag == "Zombie" || other.gameObject.tag == "Car" || other.gameObject.tag == "BlueLight") {
 		//couldnt get score to pop up
 		//sceneManager.transform.GetComponent("scrptManager").AddScore();
 		
 		//Destroy(other.gameObject);
-		other.SendMessage("shot");
-		Destroy(gameObject);
+		
+		if (other.gameObject.tag == "Car" || other.gameObject.tag == "BlueLight") {
+			other.SendMessage("bullet");
 		}
+		else {
+			other.SendMessage("shot");
+		}
+		Destroy(gameObject);
+	}
 	else if(other.gameObject.tag == "Block" || other.gameObject.tag == "Material Placed2" || other.gameObject.tag == "Spawn2")
 	{
 		Destroy(gameObject);	

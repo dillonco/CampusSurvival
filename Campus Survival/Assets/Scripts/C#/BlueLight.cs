@@ -5,6 +5,7 @@ public class BlueLight : MonoBehaviour {
 	public Transform activateObject;
 	private int health = 10;
 	public GameObject[] zombies;
+	public AudioClip bulletSound;
 	
 	
 	void activate () {
@@ -12,7 +13,19 @@ public class BlueLight : MonoBehaviour {
 			Object BL = Instantiate(activateObject, transform.position, transform.rotation);
 			BL.name = "prf_Player5"; 
 		}
+		else {
+			Destroy(GameObject.Find("prf_Player5"));
+			zombies = GameObject.FindGameObjectsWithTag("Zombie");
+			foreach (GameObject zombie in zombies) {
+				zombie.SendMessage("NoBlueLight");
+			}
+		}
 		
+		
+	}
+	
+	void bullet () {
+		audio.PlayOneShot(bulletSound);
 		
 	}
 	

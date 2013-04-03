@@ -61,6 +61,7 @@ public class src_RealZombie : MonoBehaviour {
 	
 	
 	public void NoBlueLight() {
+		chase = false;
 		directionLastSeen = Vector3.zero;
 	}
 	
