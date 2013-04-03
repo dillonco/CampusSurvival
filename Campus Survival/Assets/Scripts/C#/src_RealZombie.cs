@@ -4,8 +4,8 @@ using System.Collections;
 public class src_RealZombie : MonoBehaviour {
 	
 	public int zChaseRange = 50;			// Range a zombie will start chasing a player
-	public float runSpeed = 3f;		// Zombie run speed
-	public float walkSpeed = 2f;		// Zombie walk speed
+	public float runSpeed = 6f;		// Zombie run speed
+	public float walkSpeed = 3f;		// Zombie walk speed
 	public string tag_target = "Player";// The tag of your target, because tags are cool
 	public string tag_target1 = "Spawn1"; //The tag of the alternate targets
 	public string tag_target2 = "Spawn2"; //The tag of the alternate targets
@@ -16,8 +16,8 @@ public class src_RealZombie : MonoBehaviour {
 	private Transform target;			// Who should the zombies target? Set in Start()
 	private RaycastHit hit;				// Raycast used for Zombies sight
 	private Vector3 randomDirection; 	// Random movement for bored Zombies
-	private bool chase = false;			// Whether or not the zombie is chasing someone
-	private Vector3 targetDirection;		// Current position of the target, Zombies have super smell, and your abercrombie cologne is pretty strong brah
+	public bool chase = false;			// Whether or not the zombie is chasing someone
+	private Vector3 targetDirection;	// Current position of the target, Zombies have super smell, and your abercrombie cologne is pretty strong brah
 	private Vector3 directionLastSeen;	// Last position a zombie saw you at
 	private float distance;				// Distance between zombie and target
 	private Vector3 currentPosition;    // JOSH SAYS: Is this a leftover variable from something else?
@@ -166,6 +166,8 @@ public class src_RealZombie : MonoBehaviour {
 	}
 	// Treat this as a while loop, as the game runs
 	void Update () {
+//Debug.LogError(1.0 * Time.time % (1));
+		if (1.0 * Time.time % (1) <= 0.01 || directionLastSeen != Vector3.zero) {
 		
 		//Creates the array 
 		int[,] priority = new int[,] {{getDistance("prf_Player1"),1}, {getDistance("prf_Player2"),2}, 
@@ -201,6 +203,11 @@ public class src_RealZombie : MonoBehaviour {
 			}	
 		}
 		// magic
+		
+
+//Debug.LogError(directionLastSeen);
+//Debug.LogError(chase);
+		}
 		AIFunctionality ();
 		
 		
@@ -233,6 +240,8 @@ public class src_RealZombie : MonoBehaviour {
 	
 	// The heart of Zombie...
 	void AIFunctionality () {
+//Debug.LogError(chase);
+//Debug.LogError(directionLastSeen);
 		if (chase) {
 			MoveTowards (targetDirection, true);
 			directionLastSeen = targetDirection;  //Constantly setting this just in case you lose him

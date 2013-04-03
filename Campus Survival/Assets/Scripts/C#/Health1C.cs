@@ -7,29 +7,42 @@ public class Health1C : MonoBehaviour {
 
 	public int curhealth = 10;
 	public int maxhealth = 10; 
-	public float healthBarLength;
-	public Transform player;
+	public bool attacked = false;
+	public bool blinkon = true;
+	public int counter = 0;
 	
 	void Start () {
-		healthBarLength = Screen.width / 2.07f;
 	}
 	
 	void Update () {
+		if (counter == 120) {
+			counter = 0;
+			attacked = false;
+		}
+		else if (counter >= 1) {
+			counter++;
+			if (counter%10 <= 3) {
+				blinkon = false;	
+			}
+			else blinkon = true;
+		}
 	}
 	
 	void OnGUI(){
-		GUI.Box(new Rect(Screen.width / 2 + 15, 40, healthBarLength, 20),"Base: " + curhealth + "/" + maxhealth);
+		if (attacked && blinkon) {
+			GUI.Label(new Rect(Screen.width - 200, 60, 200, 20), "Base under attack!");
+		}
 	}
 	
 	void shot () {
+		attacked = true;
+		counter = 1;
 		if (curhealth == 1) {
 				Debug.LogError("P1 base destroyed");
 				GameObject.Find("prf_Player1").SendMessage("NoBase");
 				Destroy(gameObject);
 			}	
 		else curhealth = curhealth - 1;
-		
-		healthBarLength = (Screen.width / 2 - 25) * (curhealth / (float)maxhealth);
 		}
 	
 	

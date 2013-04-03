@@ -5,21 +5,35 @@ public class Health2C : MonoBehaviour {
 
 	public int curhealth = 10;
 	public int maxhealth = 10; 
-	public float healthBarLength;
+	public bool attacked = false;
+	public bool blinkon = true;
+	public int counter = 0;
 	
 	void Start () {
-	healthBarLength = Screen.width / 2.07f;
 		
 	
 	}
 	
-	void Update () {
-	
-	}
-	
 	void OnGUI(){
-		GUI.Box(new Rect(10, 40, healthBarLength, 20),"Base: " + curhealth + "/" + maxhealth);
+		if (attacked && blinkon) {
+			GUI.Label(new Rect(15, 60, 200, 20), "Base under attack!");
+		}
 	}
+	
+	void Update () {
+		if (counter == 120) {
+			counter = 0;
+			attacked = false;
+		}
+		else if (counter >= 1) {
+			counter++;
+			if (counter%10 <= 3) {
+				blinkon = false;	
+			}
+			else blinkon = true;
+		}
+	}
+	
 	
 	void shot () {
 		if (curhealth == 1) {
@@ -29,8 +43,7 @@ public class Health2C : MonoBehaviour {
 			}	
 		else curhealth = curhealth - 1;
 		
-		healthBarLength = (Screen.width / 2 - 25) * (curhealth / (float)maxhealth);
-		}
+	}
 	
 	
 	void OnTriggerEnter (Collider other) {

@@ -170,7 +170,7 @@ function Update () {
 			counter = 1;
 		}
 	}
-	else if(Input.GetKey(KeyCode.Q) && materialStash > 0) {
+	else if(Input.GetKey(KeyCode.CapsLock) && materialStash > 0) {
 		if (materialStash >= 100 && noBase == true && inZone == true){
 			materialStash = materialStash - 100;
 			var currentPos = transform.position;
@@ -196,13 +196,15 @@ function Update () {
 	}
 	//else spacevalue = 1;
 
-	else if (Input.GetKey(KeyCode.LeftControl) && spacevalue == 1 && counter == 0) {
-		spacevalue = 2;
-		counter = 1;
-	}
-	else if (Input.GetKey(KeyCode.LeftControl) && spacevalue == 2 && counter == 0) {
-		spacevalue = 1;
-		counter = 1;
+	else if (Input.GetKey(KeyCode.Tab) && counter == 0) {
+		if (spacevalue == 1) {
+			spacevalue = 2;
+			counter = 1;
+		}
+		else if (spacevalue == 2) {
+			spacevalue = 1;
+			counter = 1;
+		}
 	}
 	
 	
@@ -257,5 +259,5 @@ public function NoBase() {
 }
 
 public function OnGUI () {
-	GUI.Label(Rect(10,60,100,50),"Materials: " + materialStash.ToString());
+	GUI.Label(Rect(10,40,100,50),"Materials: " + materialStash.ToString());
 }
