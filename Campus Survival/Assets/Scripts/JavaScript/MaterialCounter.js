@@ -20,5 +20,5 @@ function OnTriggerEnter (other: Collider) {
 			counter = 0;
 		}
 		else counter++;
-	} else if (other.gameObject.name == "Red Bumper" || other.gameObject.name == "Blue Bumper") other.SendMessage("bumped");
+	}
 }

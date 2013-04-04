@@ -4,8 +4,8 @@ using System.Collections;
 public class src_RealZombie : MonoBehaviour {
 	
 	public int zChaseRange = 50;			// Range a zombie will start chasing a player
-	public float runSpeed = 6f;		// Zombie run speed
-	public float walkSpeed = 3f;		// Zombie walk speed
+	public float runSpeed = 8f;		// Zombie run speed
+	public float walkSpeed = 4f;		// Zombie walk speed
 	public string tag_target = "Player";// The tag of your target, because tags are cool
 	public string tag_target1 = "Spawn1"; //The tag of the alternate targets
 	public string tag_target2 = "Spawn2"; //The tag of the alternate targets
@@ -21,7 +21,7 @@ public class src_RealZombie : MonoBehaviour {
 	private Vector3 directionLastSeen;	// Last position a zombie saw you at
 	private float distance;				// Distance between zombie and target
 	private Vector3 currentPosition;    // JOSH SAYS: Is this a leftover variable from something else?
-		
+	
 	
 	// Raycasting against walls
 	public float speed;
@@ -93,11 +93,13 @@ public class src_RealZombie : MonoBehaviour {
 			Destroy(gameObject);
 			dz1 = Instantiate(DZ1, transform.position, transform.rotation) as Transform;
 			Physics.IgnoreCollision(dz1.collider, GameObject.Find("prf_Player1").collider);
+			GameObject.Find("levelingSystem").SendMessage("AdjustOne", 1000);
 	}
 	void dead2 () {
 			Destroy(gameObject);
 			dz2 = Instantiate(DZ2, transform.position, transform.rotation) as Transform;
 			Physics.IgnoreCollision(dz2.collider, GameObject.Find("prf_Player2").collider);
+			GameObject.Find("levelingSystem").SendMessage("AdjustTwo", 1000);
 	}
 	
 	

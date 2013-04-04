@@ -30,7 +30,7 @@ public class Health1C : MonoBehaviour {
 	
 	void OnGUI(){
 		if (attacked && blinkon) {
-			GUI.Label(new Rect(Screen.width - 200, 60, 200, 20), "Base under attack!");
+			GUI.Label(new Rect(Screen.width - 200, 59, 200, 20), "Base under attack!");
 		}
 	}
 	

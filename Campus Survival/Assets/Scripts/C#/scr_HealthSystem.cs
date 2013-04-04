@@ -8,8 +8,10 @@ public class scr_HealthSystem : MonoBehaviour {
 public int maxHealth = 100;
 public int curHealth = 100;
 public Transform blood;
+public bool shotByBullet;
 
 public float healthBarLength;
+	
 
 
 // initialize
@@ -31,6 +33,9 @@ public void AdjustCurrentHealth(int adj) {
 	curHealth += adj;
 
 	if(curHealth <= 0){
+		if (shotByBullet) {
+			GameObject.Find("prf_Player1").SendMessage("shotbybullet");
+		}
 		GameObject.Find("prf_Player1").SendMessage("Respawn");
 		curHealth = 0;
 		}
@@ -40,9 +45,15 @@ public void AdjustCurrentHealth(int adj) {
 	healthBarLength = (Screen.width / 2 - 25) * (curHealth / (float)maxHealth);
 	}
 	
+public void shot2() {
+		AdjustCurrentHealth(-10);
+		shotByBullet = true;
+	}
+	
 public void shot() {
 		Instantiate(blood, transform.position, transform.rotation);
-		AdjustCurrentHealth(-10);	
+		AdjustCurrentHealth(-10);
+		shotByBullet = false;
 	}
 	
 public void HealthRespawn() {

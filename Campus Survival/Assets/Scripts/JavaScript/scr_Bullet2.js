@@ -32,7 +32,7 @@ function OnTriggerEnter (other : Collider) {
 	}	
 	
 	else if(other.gameObject.name == "prf_Player1") {
-		other.SendMessage("shot");
+		other.SendMessage("shot2");
 		Instantiate(blood, transform.position, transform.rotation);
 		//GameObject.other.GetComponent("scr_HealthSystem").AddjustCurrentHealth(-10);
 		Destroy(gameObject);	

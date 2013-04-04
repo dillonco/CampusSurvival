@@ -38,6 +38,8 @@ var rightTexture : Texture2D;
 var upTexture : Texture2D;
 var downTexture : Texture2D;
 
+var shotByBullet : boolean = false;
+
 
 var firerate			: int = 15;
 var counter				: int = 0;
@@ -51,9 +53,16 @@ var materialStash		: int = 100;
 var gun					: int = 1;
 var inZone				: boolean = true;
 
+var gold				: Transform;
 
 
-
+function levelUp () {
+	Instantiate(gold, transform.position, transform.rotation);
+	speed = speed + 2;
+	firerate = firerate - 1;
+	counter = 0;
+	
+}
 
 function left () {
 	key = "left";
@@ -275,6 +284,9 @@ function OnTriggerExit (other: Collider) {
 
 public function Respawn() {
 	if (respawning == false) {
+		if (shotByBullet) {
+			GameObject.Find("levelingSystem").SendMessage("AdjustTwo", 3000);
+		}
 		respawning = true;
 		counter = firerate + 1;
 		speed = 0.0;
@@ -315,8 +327,12 @@ public function OnGUI () {
 	}
 	
 	if (noBase) {
-		GUI.Label(Rect(Screen.width - 200,40,100,50),"Materials: " + materialStash.ToString() + "\nNo Base");
+		GUI.Label(Rect(Screen.width - 200,44,100,50),"Materials: " + materialStash.ToString() + "\nNo Base");
 	}
-	else GUI.Label(Rect(Screen.width - 200,40,100,50),"Materials: " + materialStash.ToString());
+	else GUI.Label(Rect(Screen.width - 200,44,100,50),"Materials: " + materialStash.ToString());
 	
+}
+
+public function shotbybullet () {
+	shotByBullet = true;
 }

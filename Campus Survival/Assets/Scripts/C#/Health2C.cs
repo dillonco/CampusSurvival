@@ -16,7 +16,7 @@ public class Health2C : MonoBehaviour {
 	
 	void OnGUI(){
 		if (attacked && blinkon) {
-			GUI.Label(new Rect(15, 60, 200, 20), "Base under attack!");
+			GUI.Label(new Rect(10, 59, 200, 20), "Base under attack!");
 		}
 	}
 	
@@ -36,6 +36,8 @@ public class Health2C : MonoBehaviour {
 	
 	
 	void shot () {
+		attacked = true;
+		counter = 1;
 		if (curhealth == 1) {
 				Debug.LogError("P2 base destroyed");
 				GameObject.Find("prf_Player2").SendMessage("NoBase");

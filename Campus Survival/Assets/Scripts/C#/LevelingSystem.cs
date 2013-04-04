@@ -126,7 +126,9 @@ percentComplete;
             p1level = Math.Min(p1level + 1, maxLevel);
             PlayNextLevelSound();
 			//INSERT CHANGES TO GLOBAL HEALTH, SPEED AND FIRERATE HERE
-			Debug.LogError("Player level up");
+			
+			GameObject.Find("prf_Player1").SendMessage("levelUp");
+			//Debug.LogError("Player1 level up");
         }
     }
 	 public virtual void CheckForP2LevelUp() {
@@ -153,7 +155,8 @@ percentComplete;
             p2level = Math.Min(p2level + 1, maxLevel);
             PlayNextLevelSound();
 			//INSERT CHANGES TO GLOBAL HEALTH, SPEED AND FIRERATE HERE
-			Debug.LogError("Player level up");
+			GameObject.Find("prf_Player2").SendMessage("levelUp");
+			//Debug.LogError("Player2 level up");
         }
     }
 
@@ -162,7 +165,14 @@ percentComplete;
 		CheckForP2LevelUp();
     }
 	void OnGUI() {
-		GUILayout.Label("Player 1 level: " + p1Level);
-		GUILayout.Label("Player 2 level: " + p2Level);
+		GUI.Label(new Rect(Screen.width - 200,28,100,50), "Level: " + p1Level);
+		GUI.Label(new Rect(10,28,100,50), "Level: " + p2Level);
+	}
+	
+	void AdjustOne (int points) {
+		AdjustScore(points,"p1");
+	}
+	void AdjustTwo (int points) {
+		AdjustScore(points,"p2");
 	}
 }
