@@ -222,7 +222,7 @@ public class src_RealZombie : MonoBehaviour {
 		//----------------------Don't mind this, Josh is playing around with sprites.
 		
 		//transform.rotation *= 
-		//transform.eulerAngles *= new Vector3(1,-1,1);
+		//transform.eulerAngles = new Vector3(transform.eulerAngles.x,-transform.eulerAngles.y,transform.eulerAngles.z);
 		//if (transform.rotation.z != 270) {
 			//transform.rotation = Quaternion.AngleAxis(270, Vector3.up);
 			//transform.rotation = Quaternion.Euler (180, 0, 0);
@@ -266,13 +266,18 @@ public class src_RealZombie : MonoBehaviour {
 
 		transform.LookAt(direction);
 		
+		if (transform.right.z < 0)
+			GetComponent<Sprite>().PlayClip ("zombieleft");
+		else
+			GetComponent<Sprite>().PlayClip ("zombieright");
+		
+		transform.forward = new Vector3(transform.forward.x, transform.forward.y, transform.forward.z);
+		
 		if(fast)
 			transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
 		else
 			transform.Translate(Vector3.forward * walkSpeed * Time.deltaTime);
 		
-		//transform.Translate(Vector3.where_the_hell_am_I_going_to_get_this * runSpeed * Time.deltaTime);
-		// Note by Josh, for Josh: this is where you left off
     }
 	
 	/*
