@@ -15,174 +15,1324 @@ Platform assembly: C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\
 Loading C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\menuBuild_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
 Platform assembly: C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\menuBuild_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\menuBuild_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.093 seconds
+- Completed reload, in  0.100 seconds
 desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-The referenced script on this Behaviour is missing!
- 
-(Filename: C:/BuildAgent/work/812c4f5049264fad/Runtime/Mono/MonoBehaviour.cpp Line: 1591)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename: C:/BuildAgent/work/812c4f5049264fad/Runtime/Mono/MonoBehaviour.cpp Line: 1591)
-
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3899. Operation took 3.786267 ms.
-System memory in use: 9.8 MB.
+Unloading 124 unused Assets to reduce memory usage. Loaded Objects now: 3887. Operation took 10.664606 ms.
+System memory in use: 7.5 MB.
 Platform assembly: C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\menuBuild_Data\Managed\Boo.Lang.dll (this message is harmless)
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:shot1() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:48)
+UnityEngine.Component:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.Component:SendMessage(String)
+scr_Bullet:OnTriggerEnter(Collider) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Bullet.js:42)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at UnityEngine.Collision.get_gameObject () [0x00000] in <filename unknown>:0 
-  at src_RealZombie+<OnCollisionStay>c__Iterator7.MoveNext () [0x0009b] in C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\src_RealZombie.cs:293 
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
+ 
+(Filename: C Line: 0)
+
+shotbybullet
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+scr_Player2:shotbybullet() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\JavaScript\scr_Player2.js:291)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String)
+scr_HealthSystem2:AdjustCurrentHealth(Int32) (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:36)
+scr_HealthSystem2:Update() (at C:\Users\Jon\Documents\GitHub\CampusSurvival\Campus Survival\Assets\Scripts\C#\scr_HealthSystem2.cs:23)
  
 (Filename: C Line: 0)
 
