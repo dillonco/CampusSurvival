@@ -198,7 +198,7 @@ function Update () {
 			counter = 1;
 		}
 	}
-	else if(Input.GetKey(KeyCode.Period) && materialStash > 0) {
+	else if(Input.GetKey(KeyCode.Period) && materialStash > 0 && counter == 0) {
 		if (materialStash >= 100 && noBase == true && inZone == true){
 		materialStash = materialStash - 100;
 		var currentPos = transform.position;
@@ -212,14 +212,13 @@ function Update () {
 		}
 		else {
 			spacevalue = 0.5;
-			if (counter == 0) {
 				materialStash = materialStash - 1;
 				if (direc == "up") GameObject.Find("SocketUp").SendMessage("place");
 				else if (direc == "down") GameObject.Find("SocketDown").SendMessage("place");
 				else if (direc == "left") GameObject.Find("SocketLeft").SendMessage("place");
 				else if (direc == "right") GameObject.Find("SocketRight").SendMessage("place");
 				counter = 1;
-		}
+		
 		
 		}
 	}

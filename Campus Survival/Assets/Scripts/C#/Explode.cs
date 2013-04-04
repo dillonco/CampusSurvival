@@ -5,6 +5,7 @@ public class Explode : MonoBehaviour {
 	
 	public int health = 10;
 	public GameObject[] zombies;
+	public GameObject[] KOzombies;
 	public Transform brokenCar;
 	public AudioClip bulletSound;
 	
@@ -31,9 +32,13 @@ public class Explode : MonoBehaviour {
 			Vector3 myPos = transform.position;
 			
 			zombies = GameObject.FindGameObjectsWithTag("Zombie");
+			KOzombies = GameObject.FindGameObjectsWithTag("KOZ");
 			
 			foreach (GameObject zombie in zombies) {
 				zombie.SendMessage("boom", myPos);
+			}
+			foreach (GameObject KOzombie in KOzombies) {
+				KOzombie.SendMessage("boom", myPos);
 			}
 			
 			Destroy(gameObject);

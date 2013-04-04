@@ -23,6 +23,13 @@ function Update () {
 
 }
 
+function boom (carPos : Vector3) {
+		if ((carPos - transform.position).sqrMagnitude < 100) {
+			Destroy(gameObject);
+		}
+		
+	}
+
 
 function dead1() {
 	Destroy(gameObject);
