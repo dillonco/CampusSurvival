@@ -56,6 +56,12 @@ var inZone				: boolean = true;
 var gold				: Transform;
 
 
+function Start()  {
+	SP = GameObject.Find("prf_Player3");
+		Physics.IgnoreCollision(SP.collider, collider);
+}
+
+
 function levelUp () {
 	Instantiate(gold, transform.position, transform.rotation);
 	speed = speed + 2;
@@ -181,7 +187,7 @@ function Update () {
 	else if (counter > 0) counter++;
 	
 	
-	if (spacevalue == 0.5) spacevalue = 1;
+	if (spacevalue == 0.5) spacevalue = 2;
 	
 	
 	if(Input.GetKey(KeyCode.Slash)) {

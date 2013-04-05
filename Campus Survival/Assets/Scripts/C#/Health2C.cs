@@ -49,7 +49,7 @@ public class Health2C : MonoBehaviour {
 	
 	
 	void OnTriggerEnter (Collider other) {
-		if (other.gameObject.tag == "Bullet1") {
+		if (other.gameObject.tag == "Bullet") {
 			shot();
 		}
 	} 
