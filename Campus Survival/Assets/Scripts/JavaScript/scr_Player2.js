@@ -191,7 +191,7 @@ function Update () {
 			counter = 1;
 		}
 	}
-	else if(Input.GetKey(KeyCode.CapsLock) && materialStash > 0 && counter == 0) {
+	else if(Input.GetKey(KeyCode.Q) && materialStash > 0 && counter == 0) {
 		if (materialStash >= 100 && noBase == true && inZone == true){
 			materialStash = materialStash - 100;
 			var currentPos = transform.position;
