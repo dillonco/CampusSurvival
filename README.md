@@ -1,12 +1,10 @@
 CampusSurvival
 ==============
 
-CISC 226 Game Design
-
 Created by:
 Jon, Josh and Dillon
 
-This is a game project by The C's. Play is currently only supported via local multiplayer.
+Play is currently only supported via local multiplayer.
 
 
 Player 1: Arrows, Space to shoot, Shift for Material use
